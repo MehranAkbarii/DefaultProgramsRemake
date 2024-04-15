@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "z547UyK/+G74Ipv19lwXtsc7ZtFsQt3rZ+AAqRskuH2BeAKQp8f3yfHOp9rMa2GxXbgTFh2l6dQWkUPY3VQmRg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Home\\Desktop\\project\\DefaultPrograms\\DefaultPrograms\\DefaultPrograms.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Home\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.17763.31\\microsoft.windows.sdk.net.ref.10.0.17763.31.nupkg.sha512"
+  ],
+  "logs": []
+}
