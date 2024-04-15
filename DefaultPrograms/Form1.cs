@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Xml.Linq;
@@ -71,6 +72,7 @@ namespace DefaultPrograms {
         const int VK_C = 0x43;
         const int KEYEVENTF_KEYUP = 0x2;
         private PackageManager packageManager;
+       
         public Form1() {
             InitializeComponent();
             packageManager = new PackageManager();
@@ -78,12 +80,30 @@ namespace DefaultPrograms {
         }
         private async void LoadUWPApps() {
             var packages = packageManager.FindPackagesForUser(string.Empty);
-
             foreach (var package in packages) {
-                ListViewItem item = new ListViewItem(package.DisplayName);
-                item.SubItems.Add(package.Id.FullName);
-                item.SubItems.Add(package.InstalledLocation.Path);
-                listViewUWPApps.Items.Add(item);
+                if (package != null) {
+                    var installedLocation = package.InstalledLocation;
+                    if (installedLocation != null) {
+                        // Get the path to the AppxManifest.xml file
+                        string manifestPath = Path.Combine(installedLocation.Path, "AppxManifest.xml");
+
+                        // Parse the AppxManifest.xml file
+                        XDocument doc = XDocument.Load(manifestPath);
+
+                        // Get the file extensions from the manifest
+                        var haveExtensions = doc.Descendants()
+                                        .Where(e => e.Name.LocalName == "SupportedFileTypes")
+                                        .Elements()
+                                        .Select(e => e.Value).Any();
+                        if (haveExtensions) {
+                            if (!package.DisplayName.Contains("File Explorer")) {
+                                ListViewItem item = new ListViewItem(package.DisplayName);
+                                item.SubItems.Add(package.Id.FullName);
+                                listViewUWPApps.Items.Add(item);
+                            }
+                        }
+                    }
+                }
             }
         }
         private void listViewUWPApps_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e) {
@@ -124,8 +144,16 @@ namespace DefaultPrograms {
 
                     // Get the file extensions from the manifest
                     var extensions = doc.Descendants()
-                                    .Where(e => e.Name.LocalName == "FileType")
+                                    .Where(e => e.Name.LocalName == "SupportedFileTypes")
+                                    .Elements()
                                     .Select(e => e.Value).ToList();
+
+                    //Protocols currently unsupported 
+                    //var protocols = doc.Descendants()
+                    //       .Where(e => e.Name.LocalName == "Protocol")
+                    //       .Select(e => e.Attribute("Name").Value)
+                    //       .ToList();
+                    //extensions.AddRange(protocols);
 
                     // Create a ListViewItem for the app
                     foreach (var extension in extensions) {
@@ -187,5 +215,6 @@ namespace DefaultPrograms {
             });
             SHObjectProperties(IntPtr.Zero, SHOP_FILEPATH, filePath, null);
         }
+
     }
 }

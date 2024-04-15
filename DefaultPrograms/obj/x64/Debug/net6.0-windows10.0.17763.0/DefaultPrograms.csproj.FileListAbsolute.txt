@@ -17,3 +17,4 @@ C:\Users\Home\Desktop\project\DefaultPrograms\DefaultPrograms\obj\x64\Debug\net6
 C:\Users\Home\Desktop\project\DefaultPrograms\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.pdb
 C:\Users\Home\Desktop\project\DefaultPrograms\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.genruntimeconfig.cache
 C:\Users\Home\Desktop\project\DefaultPrograms\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\ref\DefaultPrograms.dll
+C:\Users\Home\Desktop\project\DefaultPrograms\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.sourcelink.json

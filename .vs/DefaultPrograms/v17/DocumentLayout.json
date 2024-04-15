@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\Home\\Desktop\\project\\DefaultPrograms\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5888C186-ADB2-45ED-89CD-FA6841B7B99D}|DefaultPrograms\\DefaultPrograms.csproj|c:\\users\\home\\desktop\\project\\defaultprograms\\defaultprograms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5888C186-ADB2-45ED-89CD-FA6841B7B99D}|DefaultPrograms\\DefaultPrograms.csproj|C:\\Users\\Home\\Desktop\\project\\DefaultPrograms\\defaultprograms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5888C186-ADB2-45ED-89CD-FA6841B7B99D}|DefaultPrograms\\DefaultPrograms.csproj|solutionrelative:defaultprograms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -18,21 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\Home\\Desktop\\project\\DefaultPrograms\\DefaultPrograms\\Form1.cs",
-              "RelativeDocumentMoniker": "DefaultPrograms\\Form1.cs",
-              "ToolTip": "C:\\Users\\Home\\Desktop\\project\\DefaultPrograms\\DefaultPrograms\\Form1.cs",
-              "RelativeToolTip": "DefaultPrograms\\Form1.cs",
-              "ViewState": "AQIAAJUAAAAAAAAAAAAmwBIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T18:17:20.476Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -42,8 +29,21 @@
               "ToolTip": "C:\\Users\\Home\\Desktop\\project\\DefaultPrograms\\DefaultPrograms\\Form1.cs [Design]",
               "RelativeToolTip": "DefaultPrograms\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T18:17:03.689Z",
+              "WhenOpened": "2024-04-15T21:22:48.67Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Home\\Desktop\\project\\DefaultPrograms\\DefaultPrograms\\Form1.cs",
+              "RelativeDocumentMoniker": "DefaultPrograms\\Form1.cs",
+              "ToolTip": "C:\\Users\\Home\\Desktop\\project\\DefaultPrograms\\DefaultPrograms\\Form1.cs",
+              "RelativeToolTip": "DefaultPrograms\\Form1.cs",
+              "ViewState": "AQIAALgAAAAAAAAAAAAIwGIAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T18:17:20.476Z",
+              "EditorCaption": ""
             }
           ]
         }
