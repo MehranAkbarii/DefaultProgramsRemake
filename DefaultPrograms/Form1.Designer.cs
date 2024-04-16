@@ -33,7 +33,9 @@
             // listViewUWPApps
             // 
             listViewUWPApps.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            listViewUWPApps.HeaderStyle = ColumnHeaderStyle.Nonclickable;
             listViewUWPApps.Location = new Point(12, 60);
+            listViewUWPApps.MultiSelect = false;
             listViewUWPApps.Name = "listViewUWPApps";
             listViewUWPApps.Size = new Size(377, 490);
             listViewUWPApps.Sorting = SortOrder.Ascending;
@@ -72,21 +74,22 @@
             label2.AutoSize = true;
             label2.Location = new Point(13, 33);
             label2.Name = "label2";
-            label2.Size = new Size(592, 15);
+            label2.Size = new Size(569, 15);
             label2.TabIndex = 3;
-            label2.Text = "Select an app to view apps's availible associations, and to change the default app, double click on an extension.";
+            label2.Text = "Select an app to view apps's availible associations, to change the default app, double click on an extension.";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Window;
             ClientSize = new Size(784, 561);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(listViewFileExtensions);
             Controls.Add(listViewUWPApps);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            MinimumSize = new Size(640, 480);
+            MinimumSize = new Size(800, 600);
             Name = "Form1";
             Text = "Set Defaults By App";
             ResumeLayout(false);
