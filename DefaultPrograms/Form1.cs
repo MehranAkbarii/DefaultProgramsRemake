@@ -174,10 +174,6 @@ namespace DefaultPrograms {
                 }
             }
         }
-
-        private void listViewFileExtensions_SelectedIndexChanged(object sender, EventArgs e) {
-
-        }
         public static void showOpenWithDialog(string extension) {
             string fileName = Guid.NewGuid().ToString() + extension;
             string filePath = Path.Combine(Path.GetTempPath(), fileName);

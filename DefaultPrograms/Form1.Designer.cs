@@ -24,39 +24,11 @@
         /// </summary>
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            listViewUWPApps = new ListView();
-            listViewFileExtensions = new ListView();
             label1 = new Label();
             label2 = new Label();
+            listViewFileExtensions = new ListView();
+            listViewUWPApps = new ListView();
             SuspendLayout();
-            // 
-            // listViewUWPApps
-            // 
-            listViewUWPApps.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            listViewUWPApps.HeaderStyle = ColumnHeaderStyle.Nonclickable;
-            listViewUWPApps.Location = new Point(12, 60);
-            listViewUWPApps.MultiSelect = false;
-            listViewUWPApps.Name = "listViewUWPApps";
-            listViewUWPApps.Size = new Size(377, 490);
-            listViewUWPApps.Sorting = SortOrder.Ascending;
-            listViewUWPApps.TabIndex = 0;
-            listViewUWPApps.UseCompatibleStateImageBehavior = false;
-            listViewUWPApps.View = View.Details;
-            listViewUWPApps.ItemSelectionChanged += listViewUWPApps_ItemSelectionChanged;
-            listViewUWPApps.MouseClick += listViewUWPApps_MouseClick;
-            // 
-            // listViewFileExtensions
-            // 
-            listViewFileExtensions.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            listViewFileExtensions.Location = new Point(395, 60);
-            listViewFileExtensions.MultiSelect = false;
-            listViewFileExtensions.Name = "listViewFileExtensions";
-            listViewFileExtensions.Size = new Size(377, 490);
-            listViewFileExtensions.Sorting = SortOrder.Ascending;
-            listViewFileExtensions.TabIndex = 1;
-            listViewFileExtensions.UseCompatibleStateImageBehavior = false;
-            listViewFileExtensions.View = View.Details;
-            listViewFileExtensions.MouseDoubleClick += listViewFileExtensions_MouseDoubleClick;
             // 
             // label1
             // 
@@ -78,16 +50,44 @@
             label2.TabIndex = 3;
             label2.Text = "Select an app to view apps's availible associations, to change the default app, double click on an extension.";
             // 
+            // listViewFileExtensions
+            // 
+            listViewFileExtensions.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            listViewFileExtensions.Location = new Point(395, 60);
+            listViewFileExtensions.MultiSelect = false;
+            listViewFileExtensions.Name = "listViewFileExtensions";
+            listViewFileExtensions.Size = new Size(377, 489);
+            listViewFileExtensions.Sorting = SortOrder.Ascending;
+            listViewFileExtensions.TabIndex = 1;
+            listViewFileExtensions.UseCompatibleStateImageBehavior = false;
+            listViewFileExtensions.View = View.Details;
+            listViewFileExtensions.MouseDoubleClick += listViewFileExtensions_MouseDoubleClick;
+            // 
+            // listViewUWPApps
+            // 
+            listViewUWPApps.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            listViewUWPApps.HeaderStyle = ColumnHeaderStyle.Nonclickable;
+            listViewUWPApps.Location = new Point(12, 60);
+            listViewUWPApps.MultiSelect = false;
+            listViewUWPApps.Name = "listViewUWPApps";
+            listViewUWPApps.Size = new Size(377, 489);
+            listViewUWPApps.Sorting = SortOrder.Ascending;
+            listViewUWPApps.TabIndex = 0;
+            listViewUWPApps.UseCompatibleStateImageBehavior = false;
+            listViewUWPApps.View = View.Details;
+            listViewUWPApps.ItemSelectionChanged += listViewUWPApps_ItemSelectionChanged;
+            listViewUWPApps.MouseClick += listViewUWPApps_MouseClick;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Window;
             ClientSize = new Size(784, 561);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(listViewFileExtensions);
             Controls.Add(listViewUWPApps);
+            Controls.Add(label2);
+            Controls.Add(listViewFileExtensions);
+            Controls.Add(label1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MinimumSize = new Size(800, 600);
             Name = "Form1";
@@ -97,10 +97,9 @@
         }
 
         #endregion
-
-        private ListView listViewUWPApps;
-        private ListView listViewFileExtensions;
         private Label label1;
         private Label label2;
+        private ListView listViewFileExtensions;
+        private ListView listViewUWPApps;
     }
 }
