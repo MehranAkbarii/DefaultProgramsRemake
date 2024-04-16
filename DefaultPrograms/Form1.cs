@@ -1,3 +1,5 @@
+using Microsoft.Win32;
+using System;
 using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -72,12 +74,15 @@ namespace DefaultPrograms {
         const int VK_C = 0x43;
         const int KEYEVENTF_KEYUP = 0x2;
         private PackageManager packageManager;
-       
+
         public Form1() {
             InitializeComponent();
             packageManager = new PackageManager();
             LoadUWPApps();
+            listViewUWPApps.Columns.Add("Apps:").Width = 200;
+            listViewFileExtensions.Columns.Add("Extensions:").Width = 200;
         }
+
         private async void LoadUWPApps() {
             var packages = packageManager.FindPackagesForUser(string.Empty);
             foreach (var package in packages) {
@@ -107,9 +112,9 @@ namespace DefaultPrograms {
             }
         }
         private void listViewUWPApps_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e) {
-            if (e.IsSelected) {
-                DisplayFileExtensions(e.Item.SubItems[1].Text);
-            }
+            //if (e.IsSelected) {
+            //    DisplayFileExtensions(e.Item.SubItems[1].Text);
+            //}
         }
 
         private async Task<Package> FindPackageByFullName(string packageFullName) {
@@ -128,7 +133,7 @@ namespace DefaultPrograms {
 
         private async Task DisplayFileExtensions(string packageFullName) {
             PackageManager packageManager = new PackageManager();
-            listViewFileExtensions.Clear();
+            
             // Find the package
             var package = await FindPackageByFullName(packageFullName);
 
@@ -157,22 +162,21 @@ namespace DefaultPrograms {
 
                     // Create a ListViewItem for the app
                     foreach (var extension in extensions) {
-                        ListViewItem item = new ListViewItem(extension);
-                        item.SubItems.Add(item.Name);
-                        listViewFileExtensions.Items.Add(item);
-                    }
+                        if ((extension != "") && (extension != "*")) {
+                            ListViewItem item = new ListViewItem(extension);
+                            item.SubItems.Add(item.Name);
+                            listViewFileExtensions.Items.Add(item);
+                        }
 
+                    }
+                    
                     // Add the ListViewItem to the ListView
                 }
             }
         }
 
         private void listViewFileExtensions_SelectedIndexChanged(object sender, EventArgs e) {
-            if (listViewFileExtensions.SelectedItems.Count > 0) {
-                string str = listViewFileExtensions.SelectedItems[0].Text;
-                showOpenWithDialog(str);
 
-            }
         }
         public static void showOpenWithDialog(string extension) {
             string fileName = Guid.NewGuid().ToString() + extension;
@@ -216,5 +220,18 @@ namespace DefaultPrograms {
             SHObjectProperties(IntPtr.Zero, SHOP_FILEPATH, filePath, null);
         }
 
+        private void listViewFileExtensions_MouseDoubleClick(object sender, MouseEventArgs e) {
+            if (listViewFileExtensions.SelectedItems.Count > 0) {
+                string str = listViewFileExtensions.SelectedItems[0].Text;
+                showOpenWithDialog(str);
+
+            }
+        }
+
+        private void listViewUWPApps_MouseClick(object sender, MouseEventArgs e) {
+            listViewFileExtensions.Clear();
+            DisplayFileExtensions(listViewUWPApps.SelectedItems[0].SubItems[1].Text);
+            listViewFileExtensions.Columns.Add("Extensions:").Width = 200;
+        }
     }
 }
