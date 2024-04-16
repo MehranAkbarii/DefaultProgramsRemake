@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "z547UyK/+G74Ipv19lwXtsc7ZtFsQt3rZ+AAqRskuH2BeAKQp8f3yfHOp9rMa2GxXbgTFh2l6dQWkUPY3VQmRg==",
+  "dgSpecHash": "ORyXI2em/T944Dlba4FZJrbZ7rJL//9Ug9urm0QSWl1ChMVJ+O2NPSvXDOjjz9LB1/2qQDt4PTnufGqlAUe9og==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Home\\Desktop\\project\\DefaultPrograms\\DefaultPrograms\\DefaultPrograms.csproj",
+  "projectFilePath": "C:\\Users\\Home\\Documents\\VS projects\\DefaultPrograms\\DefaultPrograms\\DefaultPrograms.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Home\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.17763.31\\microsoft.windows.sdk.net.ref.10.0.17763.31.nupkg.sha512"
   ],

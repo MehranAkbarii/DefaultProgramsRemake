@@ -77,7 +77,6 @@
             listViewUWPApps.TabIndex = 0;
             listViewUWPApps.UseCompatibleStateImageBehavior = false;
             listViewUWPApps.View = View.Details;
-            listViewUWPApps.ItemSelectionChanged += listViewUWPApps_ItemSelectionChanged;
             listViewUWPApps.MouseClick += listViewUWPApps_MouseClick;
             // 
             // buttonClose

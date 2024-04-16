@@ -8,6 +8,8 @@ using System.Xml.Linq;
 using Windows.ApplicationModel;
 using Windows.Management.Deployment;
 using Windows.System;
+using FileAssociationLibrary;
+
 namespace DefaultPrograms {
     public partial class Form1 : Form {
         [DllImport("shell32.dll")]
@@ -75,10 +77,13 @@ namespace DefaultPrograms {
         const int KEYEVENTF_KEYUP = 0x2;
         private PackageManager packageManager;
 
+        List<RegisteredApplication> registeredPrograms;
+
         public Form1() {
             InitializeComponent();
             packageManager = new PackageManager();
             LoadUWPApps();
+            loadPrograms();
             listViewUWPApps.Columns.Add("Apps:").Width = 200;
             listViewFileExtensions.Columns.Add("Extensions:").Width = 200;
         }
@@ -111,13 +116,9 @@ namespace DefaultPrograms {
                 }
             }
         }
-        private void listViewUWPApps_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e) {
-            //if (e.IsSelected) {
-            //    DisplayFileExtensions(e.Item.SubItems[1].Text);
-            //}
-        }
 
-        private async Task<Package> FindPackageByFullName(string packageFullName) {
+
+        private async Task<Package> findPackageByFullName(string packageFullName) {
             PackageManager packageManager = new PackageManager();
             var packages = packageManager.FindPackagesForUser(string.Empty);
 
@@ -131,11 +132,11 @@ namespace DefaultPrograms {
         }
 
 
-        private async Task DisplayFileExtensions(string packageFullName) {
+        private async Task displayUwpFileExtensions(string packageFullName) {
             PackageManager packageManager = new PackageManager();
 
             // Find the package
-            var package = await FindPackageByFullName(packageFullName);
+            var package = await findPackageByFullName(packageFullName);
 
             if (package != null) {
                 var installedLocation = package.InstalledLocation;
@@ -226,12 +227,35 @@ namespace DefaultPrograms {
 
         private void listViewUWPApps_MouseClick(object sender, MouseEventArgs e) {
             listViewFileExtensions.Clear();
-            DisplayFileExtensions(listViewUWPApps.SelectedItems[0].SubItems[1].Text);
+            if (listViewUWPApps.SelectedItems[0].SubItems.Count > 1) {
+                displayUwpFileExtensions(listViewUWPApps.SelectedItems[0].SubItems[1].Text);
+            } else {
+                displayProgramExtensions(listViewUWPApps.SelectedItems[0].Text);
+            }
             listViewFileExtensions.Columns.Add("Extensions:").Width = 200;
         }
 
         private void buttonClose_Click(object sender, EventArgs e) {
             this.Close();
+        }
+
+        private void loadPrograms() {
+            registeredPrograms = FileAssociationManager.GetRegisteredApplications();
+            foreach (RegisteredApplication application in this.registeredPrograms) {
+                listViewUWPApps.Items.Add(application.DisplayName);
+            }
+        }
+        private void displayProgramExtensions(string programName) {
+            RegisteredApplication registeredProgram = registeredPrograms.Where((registeredProgram) => registeredProgram.DisplayName.Equals(programName)).First();
+            List<String> extensions = registeredProgram.Capabilities;
+            foreach (var extension in extensions) {
+                if ((extension != "") && (extension != "*")) {
+                    ListViewItem item = new ListViewItem(extension);
+                    item.SubItems.Add(item.Name);
+                    listViewFileExtensions.Items.Add(item);
+                }
+
+            }
         }
     }
 }

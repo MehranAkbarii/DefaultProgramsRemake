@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Home\\Desktop\\project\\DefaultPrograms\\DefaultPrograms\\DefaultPrograms.csproj": {}
+    "C:\\Users\\Home\\Documents\\VS projects\\DefaultPrograms\\DefaultPrograms\\DefaultPrograms.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Home\\Desktop\\project\\DefaultPrograms\\DefaultPrograms\\DefaultPrograms.csproj": {
+    "C:\\Users\\Home\\Documents\\VS projects\\DefaultPrograms\\DefaultPrograms\\DefaultPrograms.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Home\\Desktop\\project\\DefaultPrograms\\DefaultPrograms\\DefaultPrograms.csproj",
+        "projectUniqueName": "C:\\Users\\Home\\Documents\\VS projects\\DefaultPrograms\\DefaultPrograms\\DefaultPrograms.csproj",
         "projectName": "DefaultPrograms",
-        "projectPath": "C:\\Users\\Home\\Desktop\\project\\DefaultPrograms\\DefaultPrograms\\DefaultPrograms.csproj",
+        "projectPath": "C:\\Users\\Home\\Documents\\VS projects\\DefaultPrograms\\DefaultPrograms\\DefaultPrograms.csproj",
         "packagesPath": "C:\\Users\\Home\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Home\\Desktop\\project\\DefaultPrograms\\DefaultPrograms\\obj\\",
+        "outputPath": "C:\\Users\\Home\\Documents\\VS projects\\DefaultPrograms\\DefaultPrograms\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Home\\AppData\\Roaming\\NuGet\\NuGet.Config",
