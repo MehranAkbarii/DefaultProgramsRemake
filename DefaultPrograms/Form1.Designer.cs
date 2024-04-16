@@ -28,6 +28,7 @@
             label2 = new Label();
             listViewFileExtensions = new ListView();
             listViewUWPApps = new ListView();
+            buttonClose = new Button();
             SuspendLayout();
             // 
             // label1
@@ -53,10 +54,11 @@
             // listViewFileExtensions
             // 
             listViewFileExtensions.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            listViewFileExtensions.HeaderStyle = ColumnHeaderStyle.Nonclickable;
             listViewFileExtensions.Location = new Point(395, 60);
             listViewFileExtensions.MultiSelect = false;
             listViewFileExtensions.Name = "listViewFileExtensions";
-            listViewFileExtensions.Size = new Size(377, 489);
+            listViewFileExtensions.Size = new Size(377, 457);
             listViewFileExtensions.Sorting = SortOrder.Ascending;
             listViewFileExtensions.TabIndex = 1;
             listViewFileExtensions.UseCompatibleStateImageBehavior = false;
@@ -70,7 +72,7 @@
             listViewUWPApps.Location = new Point(12, 60);
             listViewUWPApps.MultiSelect = false;
             listViewUWPApps.Name = "listViewUWPApps";
-            listViewUWPApps.Size = new Size(377, 489);
+            listViewUWPApps.Size = new Size(377, 457);
             listViewUWPApps.Sorting = SortOrder.Ascending;
             listViewUWPApps.TabIndex = 0;
             listViewUWPApps.UseCompatibleStateImageBehavior = false;
@@ -78,12 +80,24 @@
             listViewUWPApps.ItemSelectionChanged += listViewUWPApps_ItemSelectionChanged;
             listViewUWPApps.MouseClick += listViewUWPApps_MouseClick;
             // 
+            // buttonClose
+            // 
+            buttonClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            buttonClose.Location = new Point(697, 526);
+            buttonClose.Name = "buttonClose";
+            buttonClose.Size = new Size(75, 23);
+            buttonClose.TabIndex = 4;
+            buttonClose.Text = "Close";
+            buttonClose.UseVisualStyleBackColor = true;
+            buttonClose.Click += buttonClose_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Window;
             ClientSize = new Size(784, 561);
+            Controls.Add(buttonClose);
             Controls.Add(listViewUWPApps);
             Controls.Add(label2);
             Controls.Add(listViewFileExtensions);
@@ -91,6 +105,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             MinimumSize = new Size(800, 600);
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Set Defaults By App";
             ResumeLayout(false);
             PerformLayout();
@@ -101,5 +116,6 @@
         private Label label2;
         private ListView listViewFileExtensions;
         private ListView listViewUWPApps;
+        private Button buttonClose;
     }
 }

@@ -18,3 +18,5 @@ C:\Users\Home\Desktop\project\DefaultPrograms\DefaultPrograms\obj\x64\Release\ne
 C:\Users\Home\Desktop\project\DefaultPrograms\DefaultPrograms\obj\x64\Release\net6.0-windows10.0.17763.0\DefaultPrograms.genruntimeconfig.cache
 C:\Users\Home\Desktop\project\DefaultPrograms\DefaultPrograms\obj\x64\Release\net6.0-windows10.0.17763.0\ref\DefaultPrograms.dll
 C:\Users\Home\Desktop\project\DefaultPrograms\DefaultPrograms\obj\x64\Release\net6.0-windows10.0.17763.0\DefaultPrograms.sourcelink.json
+C:\Users\Home\Desktop\project\DefaultPrograms\DefaultPrograms\obj\x64\Release\net6.0-windows10.0.17763.0\DefaultPrograms.MainForm.resources
+C:\Users\Home\Desktop\project\DefaultPrograms\DefaultPrograms\obj\x64\Release\net6.0-windows10.0.17763.0\DefaultPrograms.Properties.Resources.resources

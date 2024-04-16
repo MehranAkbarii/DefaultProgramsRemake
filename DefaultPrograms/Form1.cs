@@ -133,7 +133,7 @@ namespace DefaultPrograms {
 
         private async Task DisplayFileExtensions(string packageFullName) {
             PackageManager packageManager = new PackageManager();
-            
+
             // Find the package
             var package = await FindPackageByFullName(packageFullName);
 
@@ -169,7 +169,7 @@ namespace DefaultPrograms {
                         }
 
                     }
-                    
+
                     // Add the ListViewItem to the ListView
                 }
             }
@@ -228,6 +228,10 @@ namespace DefaultPrograms {
             listViewFileExtensions.Clear();
             DisplayFileExtensions(listViewUWPApps.SelectedItems[0].SubItems[1].Text);
             listViewFileExtensions.Columns.Add("Extensions:").Width = 200;
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e) {
+            this.Close();
         }
     }
 }
