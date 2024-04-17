@@ -106,10 +106,17 @@ namespace DefaultPrograms {
                                         .Elements()
                                         .Select(e => e.Value).Any();
                         if (haveExtensions) {
-                            if (!package.DisplayName.Contains("File Explorer")) {
-                                ListViewItem item = new ListViewItem(package.DisplayName);
-                                item.SubItems.Add(package.Id.FullName);
-                                listViewUWPApps.Items.Add(item);
+                            if ((!package.DisplayName.Equals("File Explorer")) && (!package.DisplayName.Equals("Web Media Extensions")))
+                                {
+                                if (package.DisplayName.Equals("Windows Media Player")) {
+                                    ListViewItem listitem = new ListViewItem("Media Player");
+                                    listitem.SubItems.Add(package.Id.FullName);
+                                    listViewUWPApps.Items.Add(listitem);
+                                } else {
+                                    ListViewItem item = new ListViewItem(package.DisplayName);
+                                    item.SubItems.Add(package.Id.FullName);
+                                    listViewUWPApps.Items.Add(item);
+                                }
                             }
                         }
                     }
@@ -242,12 +249,12 @@ namespace DefaultPrograms {
         private void loadPrograms() {
             registeredPrograms = FileAssociationManager.GetRegisteredApplications();
             foreach (RegisteredApplication application in this.registeredPrograms) {
-                if((!application.DisplayName.Equals("File Explorer")) && (!application.DisplayName.Equals("Windows Search Explorer")))
-                listViewUWPApps.Items.Add(application.DisplayName);
+                if ((!application.DisplayName.Equals("File Explorer")) && (!application.DisplayName.Equals("Windows Search Explorer")))
+                    listViewUWPApps.Items.Add(application.DisplayName);
             }
         }
         private void displayProgramExtensions(string programName) {
-            RegisteredApplication registeredProgram = registeredPrograms.Where((registeredProgram) => registeredProgram.DisplayName.Equals(programName)).First();
+            RegisteredApplication registeredProgram = registeredPrograms.Single((registeredProgram) => registeredProgram.DisplayName.Equals(programName));
             List<String> extensions = registeredProgram.Capabilities;
             foreach (var extension in extensions) {
                 if ((extension != "") && (extension != "*")) {
