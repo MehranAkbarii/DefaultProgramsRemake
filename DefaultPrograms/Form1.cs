@@ -242,6 +242,7 @@ namespace DefaultPrograms {
         private void loadPrograms() {
             registeredPrograms = FileAssociationManager.GetRegisteredApplications();
             foreach (RegisteredApplication application in this.registeredPrograms) {
+                if(!application.DisplayName.Equals("File Explorer"))
                 listViewUWPApps.Items.Add(application.DisplayName);
             }
         }
