@@ -47,9 +47,9 @@
             label2.AutoSize = true;
             label2.Location = new Point(13, 33);
             label2.Name = "label2";
-            label2.Size = new Size(584, 15);
+            label2.Size = new Size(634, 15);
             label2.TabIndex = 3;
-            label2.Text = "Click on an app to view apps's available associations, to change the default app, double click on an extension.";
+            label2.Text = "Click on an app to view apps's available associations, to view and change the default app, double click on an extension.";
             // 
             // listViewFileExtensions
             // 
