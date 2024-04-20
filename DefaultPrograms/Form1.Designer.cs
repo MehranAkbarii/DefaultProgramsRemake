@@ -54,6 +54,7 @@
             // listViewFileExtensions
             // 
             listViewFileExtensions.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            listViewFileExtensions.FullRowSelect = true;
             listViewFileExtensions.HeaderStyle = ColumnHeaderStyle.Nonclickable;
             listViewFileExtensions.Location = new Point(395, 60);
             listViewFileExtensions.MultiSelect = false;

@@ -240,7 +240,7 @@ namespace DefaultPrograms {
                 displayProgramExtensions(listViewUWPApps.SelectedItems[0].Text);
             }
             listViewFileExtensions.Columns.Add("Extensions:").Width = 150;
-            listViewFileExtensions.Columns.Add("Current Default:").Width = 150;
+            listViewFileExtensions.Columns.Add("Current Defaults:").Width = 150;
         }
 
         private void buttonClose_Click(object sender, EventArgs e) {
