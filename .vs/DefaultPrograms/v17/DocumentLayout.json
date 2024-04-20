@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Home\\Documents\\VS projects\\DefaultPrograms\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5888C186-ADB2-45ED-89CD-FA6841B7B99D}|DefaultPrograms\\DefaultPrograms.csproj|C:\\Users\\Home\\Documents\\VS projects\\DefaultPrograms\\defaultprograms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5888C186-ADB2-45ED-89CD-FA6841B7B99D}|DefaultPrograms\\DefaultPrograms.csproj|solutionrelative:defaultprograms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{5888C186-ADB2-45ED-89CD-FA6841B7B99D}|DefaultPrograms\\DefaultPrograms.csproj|c:\\users\\home\\documents\\vs projects\\defaultprograms\\defaultprograms\\libs\\fileassociationliberary\\fileassociationlibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5888C186-ADB2-45ED-89CD-FA6841B7B99D}|DefaultPrograms\\DefaultPrograms.csproj|solutionrelative:defaultprograms\\libs\\fileassociationliberary\\fileassociationlibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5888C186-ADB2-45ED-89CD-FA6841B7B99D}|DefaultPrograms\\DefaultPrograms.csproj|C:\\Users\\Home\\Documents\\VS projects\\DefaultPrograms\\defaultprograms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5888C186-ADB2-45ED-89CD-FA6841B7B99D}|DefaultPrograms\\DefaultPrograms.csproj|solutionrelative:defaultprograms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5888C186-ADB2-45ED-89CD-FA6841B7B99D}|DefaultPrograms\\DefaultPrograms.csproj|C:\\Users\\Home\\Documents\\VS projects\\DefaultPrograms\\defaultprograms\\libs\\fileassociationliberary\\internal\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5888C186-ADB2-45ED-89CD-FA6841B7B99D}|DefaultPrograms\\DefaultPrograms.csproj|solutionrelative:defaultprograms\\libs\\fileassociationliberary\\internal\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Helper.cs",
+              "DocumentMoniker": "C:\\Users\\Home\\Documents\\VS projects\\DefaultPrograms\\DefaultPrograms\\libs\\FileAssociationLiberary\\Internal\\Helper.cs",
+              "RelativeDocumentMoniker": "DefaultPrograms\\libs\\FileAssociationLiberary\\Internal\\Helper.cs",
+              "ToolTip": "C:\\Users\\Home\\Documents\\VS projects\\DefaultPrograms\\DefaultPrograms\\libs\\FileAssociationLiberary\\Internal\\Helper.cs",
+              "RelativeToolTip": "DefaultPrograms\\libs\\FileAssociationLiberary\\Internal\\Helper.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAswCMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T20:49:16.381Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.cs [Design]",
+              "Title": "FileAssociationLibrary.cs",
+              "DocumentMoniker": "C:\\Users\\Home\\Documents\\VS projects\\DefaultPrograms\\DefaultPrograms\\libs\\FileAssociationLiberary\\FileAssociationLibrary.cs",
+              "RelativeDocumentMoniker": "DefaultPrograms\\libs\\FileAssociationLiberary\\FileAssociationLibrary.cs",
+              "ToolTip": "C:\\Users\\Home\\Documents\\VS projects\\DefaultPrograms\\DefaultPrograms\\libs\\FileAssociationLiberary\\FileAssociationLibrary.cs",
+              "RelativeToolTip": "DefaultPrograms\\libs\\FileAssociationLiberary\\FileAssociationLibrary.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAMMCAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T20:05:32.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\Home\\Documents\\VS projects\\DefaultPrograms\\DefaultPrograms\\Form1.cs",
               "RelativeDocumentMoniker": "DefaultPrograms\\Form1.cs",
-              "ToolTip": "C:\\Users\\Home\\Documents\\VS projects\\DefaultPrograms\\DefaultPrograms\\Form1.cs [Design]",
-              "RelativeToolTip": "DefaultPrograms\\Form1.cs [Design]",
+              "ToolTip": "C:\\Users\\Home\\Documents\\VS projects\\DefaultPrograms\\DefaultPrograms\\Form1.cs",
+              "RelativeToolTip": "DefaultPrograms\\Form1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAPEAAABJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T11:48:49.828Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-20T19:52:32.601Z",
+              "EditorCaption": ""
             }
           ]
         }

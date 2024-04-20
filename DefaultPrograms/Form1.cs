@@ -172,7 +172,7 @@ namespace DefaultPrograms {
                     foreach (var extension in extensions) {
                         if ((extension != "") && (extension != "*")) {
                             ListViewItem item = new ListViewItem(extension);
-                            item.SubItems.Add(item.Name);
+                            item.SubItems.Add(AppAssociation.GetDefaultHandler(extension));
                             listViewFileExtensions.Items.Add(item);
                         }
 
@@ -239,7 +239,8 @@ namespace DefaultPrograms {
             } else {
                 displayProgramExtensions(listViewUWPApps.SelectedItems[0].Text);
             }
-            listViewFileExtensions.Columns.Add("Extensions:").Width = 200;
+            listViewFileExtensions.Columns.Add("Extensions:").Width = 150;
+            listViewFileExtensions.Columns.Add("Current Default:").Width = 150;
         }
 
         private void buttonClose_Click(object sender, EventArgs e) {
@@ -259,10 +260,9 @@ namespace DefaultPrograms {
             foreach (var extension in extensions) {
                 if ((extension != "") && (extension != "*")) {
                     ListViewItem item = new ListViewItem(extension);
-                    item.SubItems.Add(item.Name);
+                    item.SubItems.Add(AppAssociation.GetDefaultHandler( extension ));
                     listViewFileExtensions.Items.Add(item);
                 }
-
             }
         }
     }
