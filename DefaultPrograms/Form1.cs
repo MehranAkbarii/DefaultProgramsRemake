@@ -83,15 +83,15 @@ namespace DefaultPrograms {
             InitializeComponent();
             packageManager = new PackageManager();
             assocManager = new FileAssociationManager();
-            LoadUWPApps();
+            loadUWPApps();
             loadPrograms();
-            listViewUWPApps.Columns.Add("Apps:").Width = 200;
+            listViewUWPApps.Columns.Add("Apps").Width = 200;
             listViewFileExtensions.Columns.Add("Extensions").Width = 150;
             listViewFileExtensions.Columns.Add("Description").Width = 300;
             listViewFileExtensions.Columns.Add("Current Defaults").Width = 150;
         }
 
-        private async void LoadUWPApps() {
+        private async void loadUWPApps() {
             var packages = packageManager.FindPackagesForUser(string.Empty);
             foreach (var package in packages) {
                 if (package != null) {

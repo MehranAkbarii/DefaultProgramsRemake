@@ -69,6 +69,7 @@
             // listViewUWPApps
             // 
             listViewUWPApps.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            listViewUWPApps.FullRowSelect = true;
             listViewUWPApps.HeaderStyle = ColumnHeaderStyle.Nonclickable;
             listViewUWPApps.Location = new Point(12, 60);
             listViewUWPApps.MultiSelect = false;
