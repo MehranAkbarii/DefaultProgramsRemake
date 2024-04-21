@@ -1,8 +1,9 @@
 **Remake classic Set Default Programs page from Default Programs Control Panel (sud.dll) for Windows 10 1809 and above (x64) and Windows 11**
 
-![Screenshot (76)](https://github.com/MehranAkbarii/DefaultProgramsRemake/assets/133998536/02cedb9a-c747-46cf-93a2-52f102141b52)
+![Screenshot (79)](https://github.com/MehranAkbarii/DefaultProgramsRemake/assets/133998536/d7724d9c-0a77-4c1b-899b-fb61261a5b1e)
 
-![Screenshot (77)](https://github.com/MehranAkbarii/DefaultProgramsRemake/assets/133998536/7a506c09-4348-4362-819c-094ff1e83c4a)
+![Screenshot (80)](https://github.com/MehranAkbarii/DefaultProgramsRemake/assets/133998536/a620465b-7fa7-4c28-a1f3-429d526651e3)
+
 
 **To do:**
 
