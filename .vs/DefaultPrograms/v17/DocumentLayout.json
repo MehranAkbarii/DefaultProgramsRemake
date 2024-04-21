@@ -5,10 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5888C186-ADB2-45ED-89CD-FA6841B7B99D}|DefaultPrograms\\DefaultPrograms.csproj|c:\\users\\home\\documents\\vs projects\\defaultprograms\\defaultprograms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5888C186-ADB2-45ED-89CD-FA6841B7B99D}|DefaultPrograms\\DefaultPrograms.csproj|solutionrelative:defaultprograms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5888C186-ADB2-45ED-89CD-FA6841B7B99D}|DefaultPrograms\\DefaultPrograms.csproj|c:\\users\\home\\documents\\vs projects\\defaultprograms\\defaultprograms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5888C186-ADB2-45ED-89CD-FA6841B7B99D}|DefaultPrograms\\DefaultPrograms.csproj|solutionrelative:defaultprograms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,21 +25,8 @@
               "ToolTip": "C:\\Users\\Home\\Documents\\VS projects\\DefaultPrograms\\DefaultPrograms\\Form1.cs [Design]",
               "RelativeToolTip": "DefaultPrograms\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T23:46:50.595Z",
+              "WhenOpened": "2024-04-21T20:34:20.12Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\Home\\Documents\\VS projects\\DefaultPrograms\\DefaultPrograms\\Form1.cs",
-              "RelativeDocumentMoniker": "DefaultPrograms\\Form1.cs",
-              "ToolTip": "C:\\Users\\Home\\Documents\\VS projects\\DefaultPrograms\\DefaultPrograms\\Form1.cs",
-              "RelativeToolTip": "DefaultPrograms\\Form1.cs",
-              "ViewState": "AQIAAN8AAAAAAAAAAAAIwPIAAABAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T19:52:32.601Z",
-              "EditorCaption": ""
             }
           ]
         }

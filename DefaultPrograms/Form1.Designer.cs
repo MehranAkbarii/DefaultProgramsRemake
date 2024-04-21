@@ -59,7 +59,7 @@
             listViewFileExtensions.Location = new Point(395, 60);
             listViewFileExtensions.MultiSelect = false;
             listViewFileExtensions.Name = "listViewFileExtensions";
-            listViewFileExtensions.Size = new Size(377, 457);
+            listViewFileExtensions.Size = new Size(729, 753);
             listViewFileExtensions.Sorting = SortOrder.Ascending;
             listViewFileExtensions.TabIndex = 1;
             listViewFileExtensions.UseCompatibleStateImageBehavior = false;
@@ -73,7 +73,7 @@
             listViewUWPApps.Location = new Point(12, 60);
             listViewUWPApps.MultiSelect = false;
             listViewUWPApps.Name = "listViewUWPApps";
-            listViewUWPApps.Size = new Size(377, 457);
+            listViewUWPApps.Size = new Size(377, 753);
             listViewUWPApps.Sorting = SortOrder.Ascending;
             listViewUWPApps.TabIndex = 0;
             listViewUWPApps.UseCompatibleStateImageBehavior = false;
@@ -83,7 +83,7 @@
             // buttonClose
             // 
             buttonClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            buttonClose.Location = new Point(697, 526);
+            buttonClose.Location = new Point(1049, 822);
             buttonClose.Name = "buttonClose";
             buttonClose.Size = new Size(75, 23);
             buttonClose.TabIndex = 4;
@@ -96,7 +96,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Window;
-            ClientSize = new Size(784, 561);
+            ClientSize = new Size(1136, 857);
             Controls.Add(buttonClose);
             Controls.Add(listViewUWPApps);
             Controls.Add(label2);

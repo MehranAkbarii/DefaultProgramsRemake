@@ -76,16 +76,19 @@ namespace DefaultPrograms {
         const int VK_C = 0x43;
         const int KEYEVENTF_KEYUP = 0x2;
         private PackageManager packageManager;
-
+        private FileAssociationManager assocManager;
         List<RegisteredApplication> registeredPrograms;
 
         public Form1() {
             InitializeComponent();
             packageManager = new PackageManager();
+            assocManager = new FileAssociationManager();
             LoadUWPApps();
             loadPrograms();
             listViewUWPApps.Columns.Add("Apps:").Width = 200;
-            listViewFileExtensions.Columns.Add("Extensions:").Width = 200;
+            listViewFileExtensions.Columns.Add("Extensions").Width = 150;
+            listViewFileExtensions.Columns.Add("Description").Width = 300;
+            listViewFileExtensions.Columns.Add("Current Defaults").Width = 150;
         }
 
         private async void LoadUWPApps() {
@@ -172,7 +175,8 @@ namespace DefaultPrograms {
                     foreach (var extension in extensions) {
                         if ((extension != "") && (extension != "*")) {
                             ListViewItem item = new ListViewItem(extension);
-                            item.SubItems.Add(AppAssociation.GetDefaultHandler(extension));
+                            item.SubItems.Add(AppAssociation.getAssocDescriptionInfo(assocManager, extension));
+                            item.SubItems.Add(AppAssociation.GetDefaultHandler(assocManager , extension));
                             listViewFileExtensions.Items.Add(item);
                         }
 
@@ -239,8 +243,9 @@ namespace DefaultPrograms {
             } else {
                 displayProgramExtensions(listViewUWPApps.SelectedItems[0].Text);
             }
-            listViewFileExtensions.Columns.Add("Extensions:").Width = 150;
-            listViewFileExtensions.Columns.Add("Current Defaults:").Width = 150;
+            listViewFileExtensions.Columns.Add("Extensions").Width = 150;
+            listViewFileExtensions.Columns.Add("Description").Width = 300;
+            listViewFileExtensions.Columns.Add("Current Defaults").Width = 150; ;
         }
 
         private void buttonClose_Click(object sender, EventArgs e) {
@@ -260,7 +265,8 @@ namespace DefaultPrograms {
             foreach (var extension in extensions) {
                 if ((extension != "") && (extension != "*")) {
                     ListViewItem item = new ListViewItem(extension);
-                    item.SubItems.Add(AppAssociation.GetDefaultHandler( extension ));
+                    item.SubItems.Add(AppAssociation.getAssocDescriptionInfo(assocManager , extension));
+                    item.SubItems.Add(AppAssociation.GetDefaultHandler(assocManager, extension ));
                     listViewFileExtensions.Items.Add(item);
                 }
             }

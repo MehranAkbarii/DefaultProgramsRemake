@@ -706,7 +706,18 @@ namespace FileAssociationLibrary {
             registrationManager = appRegistration as IApplicationAssociationRegistration;
             registrationManagerInternal = appRegistration as IApplicationAssociationRegistrationInternal;
         }
-        public static string GetDefaultHandler(string association, AssociationType type = AssociationType.FileExtension) {
+
+        public static string getAssocDescriptionInfo(FileAssociationManager assocManager, string association) {
+            ExtensionInfo extensionInfo = assocManager.GetExtensionInfo(association);
+            string extDescInfo = extensionInfo.DescriptionInfo.Description;
+            if (extDescInfo == "" || extDescInfo.StartsWith("@") || extDescInfo.Equals("Windows Photo Viewer")) {
+                string[] parts = association.Split(".");
+                return parts[1].ToUpper() + " File";
+            }
+            return extDescInfo; 
+        }
+
+        public static string GetDefaultHandler(FileAssociationManager assocManager ,string association, AssociationType type = AssociationType.FileExtension) {
             if (registrationManagerInternal == null)
                 throw new PlatformNotSupportedException();
             registrationManagerInternal.QueryCurrentDefault(association, type, AssociationLevel.User, out var info);
@@ -728,8 +739,8 @@ namespace FileAssociationLibrary {
                 }
 
             }
-            FileAssociationManager AssocManager = new FileAssociationManager();
-            ExtensionInfo extensionInfo = AssocManager.GetExtensionInfo(association);
+            
+            ExtensionInfo extensionInfo = assocManager.GetExtensionInfo(association);
             string programFriendlyName = string.Empty;
             if (extensionInfo.ContextMenuVerbs.DefaultVerb == null) {
                 programFriendlyName = "";
