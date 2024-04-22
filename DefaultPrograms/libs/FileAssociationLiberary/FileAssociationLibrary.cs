@@ -12,6 +12,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using OpenXmlPowerTools;
 using FileAssociationLiberary.Internal;
+using DocumentFormat.OpenXml.EMMA;
 
 namespace FileAssociationLibrary {
 
@@ -714,40 +715,50 @@ namespace FileAssociationLibrary {
                 string[] parts = association.Split(".");
                 return parts[1].ToUpper() + " File";
             }
-            return extDescInfo; 
+            return extDescInfo;
         }
 
-        public static string GetDefaultHandler(FileAssociationManager assocManager ,string association, AssociationType type = AssociationType.FileExtension) {
+        public static string GetDefaultHandler(FileAssociationManager assocManager, string association, AssociationType type = AssociationType.FileExtension) {
             if (registrationManagerInternal == null)
                 throw new PlatformNotSupportedException();
-            registrationManagerInternal.QueryCurrentDefault(association, type, AssociationLevel.User, out var info);
-            string fullName = "";
-            if (info != null) {
-                if (info.StartsWith("AppX")) {
-                    string str = @"SOFTWARE\Classes\" + info + @"\Application";
-                    RegistryKey key = Registry.CurrentUser.OpenSubKey(str);
-                    if (key != null) {
-                        //get UWP app name based on info
-                        if (key.GetValueNames().Contains("AppUserModelID")) {
-                            string appFamilyname = (string)key.GetValue("AppUserModelID");
-                            string[] parts = appFamilyname.Split('!');
-                            appFamilyname = parts[0];
-                            fullName = Helper.getPackageNameFromFamilyName(appFamilyname);
-                        }
-                    }
-                    return fullName;
-                }
-
-            }
-            
             ExtensionInfo extensionInfo = assocManager.GetExtensionInfo(association);
             string programFriendlyName = string.Empty;
             if (extensionInfo.ContextMenuVerbs.DefaultVerb == null) {
-                programFriendlyName = "";
+                string str = @"SOFTWARE\Classes\" + association + @"\OpenWithProgids";
+                RegistryKey key = Registry.CurrentUser.OpenSubKey(str);
+                if (key != null) {
+                    string assoc = (key.GetValueNames().Length > 0) ? key.GetValueNames()[0] : "";
+                    if (assoc.StartsWith("AppX")) {
+                        return getUWPappNameFromProgID(assoc);
+                    }
+                }
             } else if (!string.IsNullOrEmpty(extensionInfo.ContextMenuVerbs.DefaultVerb.Command)) {
                 programFriendlyName = Helper.GetProgramFriendlyName(FileAssociationManager.CleanExePath(extensionInfo.ContextMenuVerbs.DefaultVerb.Command, false));
+            } else {
+                registrationManagerInternal.QueryCurrentDefault(association, type, AssociationLevel.User, out var info); 
+                if (info != null) {
+                    if (info.StartsWith("AppX")) {
+                        return getUWPappNameFromProgID(info);
+                    }
+                }
             }
             return programFriendlyName;
+        }
+
+        public static string getUWPappNameFromProgID(string progId) {
+            string fullName = "";
+            string str = @"SOFTWARE\Classes\" + progId + @"\Application";
+            RegistryKey key = Registry.CurrentUser.OpenSubKey(str);
+            if (key != null) {
+                //get UWP app name based on info
+                if (key.GetValueNames().Contains("AppUserModelID")) {
+                    string appFamilyname = (string)key.GetValue("AppUserModelID");
+                    string[] parts = appFamilyname.Split('!');
+                    appFamilyname = parts[0];
+                    fullName = Helper.getPackageNameFromFamilyName(appFamilyname);
+                }
+            }
+            return fullName;
         }
     }
     public static class RegistryKeyExtensions {
@@ -963,7 +974,6 @@ namespace FileAssociationLibrary {
             //}
             return str;
         }
-
 
         private static ProgID GetProgID(string extension) {
             RegistryKey key;
