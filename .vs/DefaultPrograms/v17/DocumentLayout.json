@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{5888C186-ADB2-45ED-89CD-FA6841B7B99D}|DefaultPrograms\\DefaultPrograms.csproj|solutionrelative:defaultprograms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5888C186-ADB2-45ED-89CD-FA6841B7B99D}|DefaultPrograms\\DefaultPrograms.csproj|c:\\users\\home\\documents\\vs projects\\defaultprograms\\defaultprograms\\libs\\fileassociationliberary\\fileassociationlibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5888C186-ADB2-45ED-89CD-FA6841B7B99D}|DefaultPrograms\\DefaultPrograms.csproj|C:\\Users\\Home\\Documents\\VS projects\\DefaultPrograms\\defaultprograms\\libs\\fileassociationliberary\\fileassociationlibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5888C186-ADB2-45ED-89CD-FA6841B7B99D}|DefaultPrograms\\DefaultPrograms.csproj|solutionrelative:defaultprograms\\libs\\fileassociationliberary\\fileassociationlibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -42,8 +42,7 @@
               "RelativeToolTip": "DefaultPrograms\\libs\\FileAssociationLiberary\\FileAssociationLibrary.cs",
               "ViewState": "AQIAADQDAAAAAAAAAAAkwEwDAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T20:09:35.495Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-22T20:09:35.495Z"
             }
           ]
         }

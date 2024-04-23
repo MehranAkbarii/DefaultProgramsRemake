@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DefaultPrograms")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cb5017f4331446a6d7e6c525feac0c614064a26e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79f75079eaf128b1a976b007c4f0391f1eddfd52")]
 [assembly: System.Reflection.AssemblyProductAttribute("DefaultPrograms")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DefaultPrograms")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
