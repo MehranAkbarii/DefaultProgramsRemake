@@ -56,10 +56,10 @@
             listViewFileExtensions.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             listViewFileExtensions.FullRowSelect = true;
             listViewFileExtensions.HeaderStyle = ColumnHeaderStyle.Nonclickable;
-            listViewFileExtensions.Location = new Point(395, 60);
+            listViewFileExtensions.Location = new Point(270, 60);
             listViewFileExtensions.MultiSelect = false;
             listViewFileExtensions.Name = "listViewFileExtensions";
-            listViewFileExtensions.Size = new Size(729, 753);
+            listViewFileExtensions.Size = new Size(854, 753);
             listViewFileExtensions.Sorting = SortOrder.Ascending;
             listViewFileExtensions.TabIndex = 1;
             listViewFileExtensions.UseCompatibleStateImageBehavior = false;
@@ -74,7 +74,7 @@
             listViewUWPApps.Location = new Point(12, 60);
             listViewUWPApps.MultiSelect = false;
             listViewUWPApps.Name = "listViewUWPApps";
-            listViewUWPApps.Size = new Size(377, 753);
+            listViewUWPApps.Size = new Size(252, 753);
             listViewUWPApps.Sorting = SortOrder.Ascending;
             listViewUWPApps.TabIndex = 0;
             listViewUWPApps.UseCompatibleStateImageBehavior = false;

@@ -13,8 +13,14 @@ using System.Runtime.CompilerServices;
 using OpenXmlPowerTools;
 using FileAssociationLiberary.Internal;
 using DocumentFormat.OpenXml.EMMA;
+using DocumentFormat.OpenXml.ExtendedProperties;
+using Microsoft.VisualBasic.Devices;
+using System.Drawing;
 
 namespace FileAssociationLibrary {
+
+
+
 
     public class IconInfo {
         // Fields
@@ -718,24 +724,128 @@ namespace FileAssociationLibrary {
             return extDescInfo;
         }
 
+
+
         public static string GetDefaultHandler(FileAssociationManager assocManager, string association, AssociationType type = AssociationType.FileExtension) {
             if (registrationManagerInternal == null)
                 throw new PlatformNotSupportedException();
             ExtensionInfo extensionInfo = assocManager.GetExtensionInfo(association);
-            string programFriendlyName = string.Empty;
+            string programFriendlyName = "Unknown application";
             if (extensionInfo.ContextMenuVerbs.DefaultVerb == null) {
                 string str = @"SOFTWARE\Classes\" + association + @"\OpenWithProgids";
                 RegistryKey key = Registry.CurrentUser.OpenSubKey(str);
+                string assoc = "";
                 if (key != null) {
-                    string assoc = (key.GetValueNames().Length > 0) ? key.GetValueNames()[0] : "";
+                    assoc = (key.GetValueNames().Length > 0) ? key.GetValueNames()[0] : "";
                     if (assoc.StartsWith("AppX")) {
                         return getUWPappNameFromProgID(assoc);
+                    } else if (assoc == "") {
+                        str = @"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\" + association + @"\OpenWithProgids";
+                        key = Registry.CurrentUser.OpenSubKey(str);
+                        if (key != null) {
+                            assoc = (key.GetValueNames().Length > 1) ? key.GetValueNames()[1] : "";
+                            if (assoc.StartsWith("AppX")) {
+                                return getUWPappNameFromProgID(assoc);
+                            } else {
+                                str = @"SOFTWARE\Classes\" + assoc + @"\shell\Open\command";
+                                key = Registry.LocalMachine.OpenSubKey(str);
+                                if (key != null) {
+                                    string exepath = key.GetValue("") as string;
+                                    exepath = FileAssociationManager.CleanExePath(exepath, false);
+                                    string exeName = Helper.GetProgramFriendlyName(exepath);
+                                    if (exeName == "") {
+                                        return programFriendlyName;
+                                    }
+                                    return exeName;
+                                }
+                            }
+                        }
+                    } else {
+                        str = @"SOFTWARE\Classes\" + assoc + @"\shell\Open\command";
+                        key = Registry.LocalMachine.OpenSubKey(str);
+                        if (key != null) {
+                            string exepath = key.GetValue("") as string;
+                            exepath = FileAssociationManager.CleanExePath(exepath, false);
+                            string exeName = Helper.GetProgramFriendlyName(exepath);
+                            if (exeName == "") {
+                                return programFriendlyName;
+                            }
+                            return exeName;
+                        } else {
+                            str = association + @"\OpenWithProgids";
+                            key = Registry.ClassesRoot.OpenSubKey(str);
+                            if (key != null) {
+                                assoc = (key.GetValueNames().Length > 0) ? key.GetValueNames()[0] : "";
+                                if (assoc.StartsWith("AppX")) {
+                                    return getUWPappNameFromProgID(assoc);
+                                } else {
+                                    str = assoc + @"\shell\Open\command";
+                                    key = Registry.ClassesRoot.OpenSubKey(str);
+                                    if (key != null) {
+                                        string exepath = key.GetValue("") as string;
+                                        exepath = FileAssociationManager.CleanExePath(exepath, false);
+                                        string exeName = Helper.GetProgramFriendlyName(exepath);
+                                        if (exeName == "") {
+                                            return programFriendlyName;
+                                        }
+                                        return exeName;
+                                    }
+                                }
+                            }
+                        }
                     }
+                } else {
+                    str = @"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\" + association + @"\OpenWithProgids";
+                    key = Registry.CurrentUser.OpenSubKey(str);
+                    if (key != null) {
+                        assoc = (key.GetValueNames().Length > 1) ? key.GetValueNames()[1] : "";
+                        if (assoc.StartsWith("AppX")) {
+                            return getUWPappNameFromProgID(assoc);
+                        } else {
+                            str = @"SOFTWARE\Classes\" + assoc + @"\shell\Open\command";
+                            key = Registry.LocalMachine.OpenSubKey(str);
+                            if (key != null) {
+                                string exepath = key.GetValue("") as string;
+                                exepath = FileAssociationManager.CleanExePath(exepath, false);
+                                string exeName = Helper.GetProgramFriendlyName(exepath);
+                                if (exeName == "") {
+                                    return programFriendlyName;
+                                }
+                                return exeName;
+                            }
+                        }
+                    } else {
+                        str = association + @"\OpenWithProgids";
+                        key = Registry.ClassesRoot.OpenSubKey(str);
+                        if (key != null) { 
+                        assoc = (key.GetValueNames().Length > 0) ? key.GetValueNames()[0] : "";
+                            if (assoc.StartsWith("AppX")) {
+                                return getUWPappNameFromProgID(assoc);
+                            } else {
+                                str = assoc + @"\shell\Open\command";
+                                key = Registry.ClassesRoot.OpenSubKey(str);
+                                if (key != null) {
+                                    string exepath = key.GetValue("") as string;
+                                    exepath = FileAssociationManager.CleanExePath(exepath, false);
+                                    string exeName = Helper.GetProgramFriendlyName(exepath);
+                                    if (exeName == "") {
+                                        return programFriendlyName;
+                                    }
+                                    return exeName;
+                                }
+                            }
+                        }
+                    }
+
                 }
             } else if (!string.IsNullOrEmpty(extensionInfo.ContextMenuVerbs.DefaultVerb.Command)) {
-                programFriendlyName = Helper.GetProgramFriendlyName(FileAssociationManager.CleanExePath(extensionInfo.ContextMenuVerbs.DefaultVerb.Command, false));
+                string exeName = Helper.GetProgramFriendlyName(FileAssociationManager.CleanExePath(extensionInfo.ContextMenuVerbs.DefaultVerb.Command, false));
+                if (exeName == "") {
+                    return programFriendlyName;
+                }
+                return exeName;
             } else {
-                registrationManagerInternal.QueryCurrentDefault(association, type, AssociationLevel.User, out var info); 
+                registrationManagerInternal.QueryCurrentDefault(association, type, AssociationLevel.User, out var info);
                 if (info != null) {
                     if (info.StartsWith("AppX")) {
                         return getUWPappNameFromProgID(info);

@@ -88,7 +88,7 @@ namespace DefaultPrograms {
             listViewUWPApps.Columns.Add("Apps").Width = 200;
             listViewFileExtensions.Columns.Add("Extensions").Width = 150;
             listViewFileExtensions.Columns.Add("Description").Width = 300;
-            listViewFileExtensions.Columns.Add("Current Defaults").Width = 150;
+            listViewFileExtensions.Columns.Add("Current Defaults").Width = 300;
         }
 
         private async void loadUWPApps() {
@@ -245,7 +245,7 @@ namespace DefaultPrograms {
             }
             listViewFileExtensions.Columns.Add("Extensions").Width = 150;
             listViewFileExtensions.Columns.Add("Description").Width = 300;
-            listViewFileExtensions.Columns.Add("Current Defaults").Width = 150; ;
+            listViewFileExtensions.Columns.Add("Current Defaults").Width = 300; ;
         }
 
         private void buttonClose_Click(object sender, EventArgs e) {
