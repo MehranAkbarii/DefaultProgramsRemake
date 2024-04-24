@@ -24,6 +24,14 @@ namespace FileAssociationLiberary.Internal {
 
     internal class Helper {
 
+
+        public static string customizedHandlers(string handler) {
+            if (handler == "Notepad.exe")
+                handler = "Windows Notepad";
+            //add more if needed
+            return handler;
+        }
+
         public static string getPackageNameFromFamilyName(string famillyName) {
             PackageManager packageManager = new PackageManager();
             var packages = packageManager.FindPackagesForUser(string.Empty, famillyName);

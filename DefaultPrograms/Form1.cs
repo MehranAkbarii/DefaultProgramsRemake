@@ -9,6 +9,7 @@ using Windows.ApplicationModel;
 using Windows.Management.Deployment;
 using Windows.System;
 using FileAssociationLibrary;
+using FileAssociationLiberary.Internal;
 
 namespace DefaultPrograms {
     public partial class Form1 : Form {
@@ -176,7 +177,7 @@ namespace DefaultPrograms {
                         if ((extension != "") && (extension != "*")) {
                             ListViewItem item = new ListViewItem(extension);
                             item.SubItems.Add(AppAssociation.getAssocDescriptionInfo(assocManager, extension));
-                            item.SubItems.Add(AppAssociation.GetDefaultHandler(assocManager , extension));
+                            item.SubItems.Add(Helper.customizedHandlers( AppAssociation.GetDefaultHandler(assocManager , extension)));
                             listViewFileExtensions.Items.Add(item);
                         }
 
@@ -266,7 +267,7 @@ namespace DefaultPrograms {
                 if ((extension != "") && (extension != "*")) {
                     ListViewItem item = new ListViewItem(extension);
                     item.SubItems.Add(AppAssociation.getAssocDescriptionInfo(assocManager , extension));
-                    item.SubItems.Add(AppAssociation.GetDefaultHandler(assocManager, extension ));
+                    item.SubItems.Add(Helper.customizedHandlers(AppAssociation.GetDefaultHandler(assocManager, extension)));
                     listViewFileExtensions.Items.Add(item);
                 }
             }
