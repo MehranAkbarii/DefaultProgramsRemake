@@ -737,7 +737,7 @@ namespace FileAssociationLibrary {
                     str = @"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\" + association + @"\OpenWithProgids";
                     key = Registry.CurrentUser.OpenSubKey(str);
                     if (key != null) {
-                        assoc = (key.GetValueNames().Length > 1) ? key.GetValueNames()[1] : "";
+                        assoc = (key.GetValueNames().Length > 1) ? key.GetValueNames()[1] : info;
                         if (assoc.StartsWith("AppX")) {
                             return getUWPappNameFromProgID(assoc);
                         } else {
