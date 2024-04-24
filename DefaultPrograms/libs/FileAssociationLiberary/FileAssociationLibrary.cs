@@ -724,20 +724,20 @@ namespace FileAssociationLibrary {
             return extDescInfo;
         }
 
-        public static string getHandlerFromRegPathes(string association , string info) {
+        public static string getHandlerFromRegPathes(string association) {
             string programFriendlyName = "Unknown application";
             string str = @"SOFTWARE\Classes\" + association + @"\OpenWithProgids";
             RegistryKey key = Registry.CurrentUser.OpenSubKey(str);
             string assoc = "";
             if (key != null) {
-                assoc = (key.GetValueNames().Length > 0) ? key.GetValueNames()[0] : info;
+                assoc = (key.GetValueNames().Length > 0) ? key.GetValueNames()[0] : "";
                 if (assoc.StartsWith("AppX")) {
                     return getUWPappNameFromProgID(assoc);
                 } else if (assoc == "") {
                     str = @"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\" + association + @"\OpenWithProgids";
                     key = Registry.CurrentUser.OpenSubKey(str);
                     if (key != null) {
-                        assoc = (key.GetValueNames().Length > 1) ? key.GetValueNames()[1] : info;
+                        assoc = (key.GetValueNames().Length > 1) ? key.GetValueNames()[1] : "";
                         if (assoc.StartsWith("AppX")) {
                             return getUWPappNameFromProgID(assoc);
                         } else {
@@ -769,7 +769,7 @@ namespace FileAssociationLibrary {
                         str = association + @"\OpenWithProgids";
                         key = Registry.ClassesRoot.OpenSubKey(str);
                         if (key != null) {
-                            assoc = (key.GetValueNames().Length > 0) ? key.GetValueNames()[0] : info;
+                            assoc = (key.GetValueNames().Length > 0) ? key.GetValueNames()[0] : "";
                             if (assoc.StartsWith("AppX")) {
                                 return getUWPappNameFromProgID(assoc);
                             } else {
@@ -792,7 +792,7 @@ namespace FileAssociationLibrary {
                 str = @"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\" + association + @"\OpenWithProgids";
                 key = Registry.CurrentUser.OpenSubKey(str);
                 if (key != null) {
-                    assoc = (key.GetValueNames().Length > 1) ? key.GetValueNames()[1] : info;
+                    assoc = (key.GetValueNames().Length > 1) ? key.GetValueNames()[1] : "";
                     if (assoc.StartsWith("AppX")) {
                         return getUWPappNameFromProgID(assoc);
                     } else {
@@ -812,7 +812,7 @@ namespace FileAssociationLibrary {
                     str = association + @"\OpenWithProgids";
                     key = Registry.ClassesRoot.OpenSubKey(str);
                     if (key != null) {
-                        assoc = (key.GetValueNames().Length > 0) ? key.GetValueNames()[0] : info;
+                        assoc = (key.GetValueNames().Length > 0) ? key.GetValueNames()[0] : "";
                         if (assoc.StartsWith("AppX")) {
                             return getUWPappNameFromProgID(assoc);
                         } else {
@@ -829,7 +829,7 @@ namespace FileAssociationLibrary {
                             } else {
                                 str = association + @"\OpenWithProgids";
                                 key = Registry.ClassesRoot.OpenSubKey(str);
-                                assoc = (key.GetValueNames().Length > 1) ? key.GetValueNames()[1] : info;
+                                assoc = (key.GetValueNames().Length > 1) ? key.GetValueNames()[1] : "";
                                 if (assoc.StartsWith("AppX")) {
                                     return getUWPappNameFromProgID(assoc);
                                 } else {
@@ -860,7 +860,7 @@ namespace FileAssociationLibrary {
             ExtensionInfo extensionInfo = assocManager.GetExtensionInfo(association);
             string programFriendlyName = "Unknown application";
             if (extensionInfo.ContextMenuVerbs.DefaultVerb == null) {
-                return getHandlerFromRegPathes(association , string.Empty);
+                return getHandlerFromRegPathes(association);
             } else if (!string.IsNullOrEmpty(extensionInfo.ContextMenuVerbs.DefaultVerb.Command)) {
                 string exeName = Helper.GetProgramFriendlyName(FileAssociationManager.CleanExePath(extensionInfo.ContextMenuVerbs.DefaultVerb.Command, false));
                 if (exeName == "") {
@@ -872,8 +872,7 @@ namespace FileAssociationLibrary {
                 if (info != null) {
                     if (info.StartsWith("AppX")) {
                         return getUWPappNameFromProgID(info);
-                    } else
-                        return getHandlerFromRegPathes(association ,info);
+                    }
                 }
             }
             return programFriendlyName;
