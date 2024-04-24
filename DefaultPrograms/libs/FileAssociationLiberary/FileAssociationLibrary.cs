@@ -1006,9 +1006,18 @@ namespace FileAssociationLibrary {
                             exepath = FileAssociationManager.CleanExePath(exepath, false);
                             string exeName = Helper.GetProgramFriendlyName(exepath);
                             if (exeName == "") {
-                                return programFriendlyName;
+                                str = info + @"\shell\Open\command";
+                                key = Registry.ClassesRoot.OpenSubKey(str);
+                                if (key != null) {
+                                    exepath = key.GetValue("") as string;
+                                    exepath = FileAssociationManager.CleanExePath(exepath, false);
+                                    exeName = Helper.GetProgramFriendlyName(exepath);
+                                    if (exeName == "") {
+                                        return programFriendlyName;
+                                    }
+                                    return exeName;
+                                }
                             }
-                            return exeName;
                         } else {
                             str = info + @"\shell\Open\command";
                             key = Registry.ClassesRoot.OpenSubKey(str);
