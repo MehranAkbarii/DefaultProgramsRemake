@@ -872,7 +872,7 @@ namespace FileAssociationLibrary {
                 if (info != null) {
                     if (info.StartsWith("AppX")) {
                         return getUWPappNameFromProgID(info);
-                    }
+                    } else return getHandlerFromRegPathes(association);
                 }
             }
             return programFriendlyName;
