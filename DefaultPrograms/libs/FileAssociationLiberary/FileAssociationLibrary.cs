@@ -724,7 +724,8 @@ namespace FileAssociationLibrary {
             return extDescInfo;
         }
 
-        public static string getHandlerFromRegPathes(string programFriendlyName, string association) {
+        public static string getHandlerFromRegPathes(string association) {
+            string programFriendlyName = "Unknown application";
             string str = @"SOFTWARE\Classes\" + association + @"\OpenWithProgids";
             RegistryKey key = Registry.CurrentUser.OpenSubKey(str);
             string assoc = "";
@@ -859,7 +860,7 @@ namespace FileAssociationLibrary {
             ExtensionInfo extensionInfo = assocManager.GetExtensionInfo(association);
             string programFriendlyName = "Unknown application";
             if (extensionInfo.ContextMenuVerbs.DefaultVerb == null) {
-                return getHandlerFromRegPathes(programFriendlyName, association);
+                return getHandlerFromRegPathes(association);
             } else if (!string.IsNullOrEmpty(extensionInfo.ContextMenuVerbs.DefaultVerb.Command)) {
                 string exeName = Helper.GetProgramFriendlyName(FileAssociationManager.CleanExePath(extensionInfo.ContextMenuVerbs.DefaultVerb.Command, false));
                 if (exeName == "") {
@@ -872,7 +873,7 @@ namespace FileAssociationLibrary {
                     if (info.StartsWith("AppX")) {
                         return getUWPappNameFromProgID(info);
                     } else
-                        return getHandlerFromRegPathes(programFriendlyName, info);
+                        return getHandlerFromRegPathes(info);
                 }
             }
             return programFriendlyName;
