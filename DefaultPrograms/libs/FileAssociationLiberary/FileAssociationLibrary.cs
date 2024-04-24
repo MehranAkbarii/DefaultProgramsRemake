@@ -832,6 +832,25 @@ namespace FileAssociationLibrary {
                                         return programFriendlyName;
                                     }
                                     return exeName;
+                                } else {
+                                    str = association + @"\OpenWithProgids";
+                                    key = Registry.ClassesRoot.OpenSubKey(str);
+                                    assoc = (key.GetValueNames().Length > 1) ? key.GetValueNames()[1] : "";
+                                    if (assoc.StartsWith("AppX")) {
+                                        return getUWPappNameFromProgID(assoc);
+                                    } else {
+                                        str = assoc + @"\shell\Open\command";
+                                        key = Registry.ClassesRoot.OpenSubKey(str);
+                                        if (key != null) {
+                                            string exepath = key.GetValue("") as string;
+                                            exepath = FileAssociationManager.CleanExePath(exepath, false);
+                                            string exeName = Helper.GetProgramFriendlyName(exepath);
+                                            if (exeName == "") {
+                                                return programFriendlyName;
+                                            }
+                                            return exeName;
+                                        }
+                                    }
                                 }
                             }
                         }
