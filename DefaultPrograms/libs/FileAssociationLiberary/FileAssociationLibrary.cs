@@ -1013,7 +1013,7 @@ namespace FileAssociationLibrary {
                                     exepath = FileAssociationManager.CleanExePath(exepath, false);
                                     exeName = Helper.GetProgramFriendlyName(exepath);
                                     if (exeName == "") {
-                                        return programFriendlyName;
+                                        return getHandlerFromRegPathes(association);
                                     }
                                     return exeName;
                                 }
@@ -1026,7 +1026,7 @@ namespace FileAssociationLibrary {
                                 exepath = FileAssociationManager.CleanExePath(exepath, false);
                                 string exeName = Helper.GetProgramFriendlyName(exepath);
                                 if (exeName == "") {
-                                    return programFriendlyName;
+                                    return getHandlerFromRegPathes(association);
                                 }
                                 return exeName;
                             }
