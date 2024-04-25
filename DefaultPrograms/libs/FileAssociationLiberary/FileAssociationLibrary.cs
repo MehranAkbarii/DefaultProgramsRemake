@@ -724,7 +724,18 @@ namespace FileAssociationLibrary {
             }
             return extDescInfo;
         }
-
+        //getHandlerFromRegPathes(string association):
+        //it is better to write new get handler logics in a new method and only check this method returned value before calling the new method
+        //example 1:
+        //if (getHandlerFromRegPathes(association) == "Unknown application")
+        //return newMethod(association);
+        //else return getHandlerFromRegPathes(association)
+        //
+        //example 2:
+        //if (getHandlerFromRegPathes(association) == "Unknown application")
+        //programFriendlyName = newMethod(association);
+        //else
+        //programFriendlyName = getHandlerFromRegPathes(association);
         public static string getHandlerFromRegPathes(string association) {
             string programFriendlyName = "Unknown application";
             string str = @"SOFTWARE\Classes\" + association + @"\OpenWithProgids";
