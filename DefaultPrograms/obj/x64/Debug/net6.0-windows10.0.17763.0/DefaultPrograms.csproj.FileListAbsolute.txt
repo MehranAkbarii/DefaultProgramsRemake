@@ -1,0 +1,70 @@
+C:\Users\Home\Desktop\project\DefaultPrograms\DefaultPrograms\bin\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.exe
+C:\Users\Home\Desktop\project\DefaultPrograms\DefaultPrograms\bin\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.deps.json
+C:\Users\Home\Desktop\project\DefaultPrograms\DefaultPrograms\bin\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.runtimeconfig.json
+C:\Users\Home\Desktop\project\DefaultPrograms\DefaultPrograms\bin\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.dll
+C:\Users\Home\Desktop\project\DefaultPrograms\DefaultPrograms\bin\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.pdb
+C:\Users\Home\Desktop\project\DefaultPrograms\DefaultPrograms\bin\x64\Debug\net6.0-windows10.0.17763.0\Microsoft.Windows.SDK.NET.dll
+C:\Users\Home\Desktop\project\DefaultPrograms\DefaultPrograms\bin\x64\Debug\net6.0-windows10.0.17763.0\WinRT.Runtime.dll
+C:\Users\Home\Desktop\project\DefaultPrograms\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.Form1.resources
+C:\Users\Home\Desktop\project\DefaultPrograms\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.csproj.GenerateResource.cache
+C:\Users\Home\Desktop\project\DefaultPrograms\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Home\Desktop\project\DefaultPrograms\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.AssemblyInfoInputs.cache
+C:\Users\Home\Desktop\project\DefaultPrograms\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.AssemblyInfo.cs
+C:\Users\Home\Desktop\project\DefaultPrograms\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.csproj.CoreCompileInputs.cache
+C:\Users\Home\Desktop\project\DefaultPrograms\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultP.FA62DD09.Up2Date
+C:\Users\Home\Desktop\project\DefaultPrograms\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.dll
+C:\Users\Home\Desktop\project\DefaultPrograms\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\refint\DefaultPrograms.dll
+C:\Users\Home\Desktop\project\DefaultPrograms\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.pdb
+C:\Users\Home\Desktop\project\DefaultPrograms\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.genruntimeconfig.cache
+C:\Users\Home\Desktop\project\DefaultPrograms\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\ref\DefaultPrograms.dll
+C:\Users\Home\Desktop\project\DefaultPrograms\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.sourcelink.json
+C:\Users\Home\Documents\VS projects\DefaultPrograms\DefaultPrograms\bin\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.exe
+C:\Users\Home\Documents\VS projects\DefaultPrograms\DefaultPrograms\bin\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.deps.json
+C:\Users\Home\Documents\VS projects\DefaultPrograms\DefaultPrograms\bin\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.runtimeconfig.json
+C:\Users\Home\Documents\VS projects\DefaultPrograms\DefaultPrograms\bin\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.dll
+C:\Users\Home\Documents\VS projects\DefaultPrograms\DefaultPrograms\bin\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.pdb
+C:\Users\Home\Documents\VS projects\DefaultPrograms\DefaultPrograms\bin\x64\Debug\net6.0-windows10.0.17763.0\Microsoft.Windows.SDK.NET.dll
+C:\Users\Home\Documents\VS projects\DefaultPrograms\DefaultPrograms\bin\x64\Debug\net6.0-windows10.0.17763.0\WinRT.Runtime.dll
+C:\Users\Home\Documents\VS projects\DefaultPrograms\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.Form1.resources
+C:\Users\Home\Documents\VS projects\DefaultPrograms\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.Properties.Resources.resources
+C:\Users\Home\Documents\VS projects\DefaultPrograms\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.csproj.GenerateResource.cache
+C:\Users\Home\Documents\VS projects\DefaultPrograms\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Home\Documents\VS projects\DefaultPrograms\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.AssemblyInfoInputs.cache
+C:\Users\Home\Documents\VS projects\DefaultPrograms\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.AssemblyInfo.cs
+C:\Users\Home\Documents\VS projects\DefaultPrograms\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.csproj.CoreCompileInputs.cache
+C:\Users\Home\Documents\VS projects\DefaultPrograms\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.sourcelink.json
+C:\Users\Home\Documents\VS projects\DefaultPrograms\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultP.FA62DD09.Up2Date
+C:\Users\Home\Documents\VS projects\DefaultPrograms\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.dll
+C:\Users\Home\Documents\VS projects\DefaultPrograms\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\refint\DefaultPrograms.dll
+C:\Users\Home\Documents\VS projects\DefaultPrograms\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.pdb
+C:\Users\Home\Documents\VS projects\DefaultPrograms\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.genruntimeconfig.cache
+C:\Users\Home\Documents\VS projects\DefaultPrograms\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\ref\DefaultPrograms.dll
+C:\Users\Home\Documents\VS projects\DefaultPrograms\DefaultPrograms\bin\x64\Debug\net6.0-windows10.0.17763.0\DocumentFormat.OpenXml.dll
+C:\Users\Home\Documents\VS projects\DefaultPrograms\DefaultPrograms\bin\x64\Debug\net6.0-windows10.0.17763.0\OpenXmlPowerTools.dll
+C:\Users\Home\Documents\VS projects\DefaultPrograms\DefaultPrograms\bin\x64\Debug\net6.0-windows10.0.17763.0\System.Management.Automation.dll
+C:\Users\Home\Documents\VS projects\DefaultPrograms\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.csproj.AssemblyReference.cache
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\bin\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.exe
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\bin\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.deps.json
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\bin\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.runtimeconfig.json
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\bin\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.dll
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\bin\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.pdb
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\bin\x64\Debug\net6.0-windows10.0.17763.0\DocumentFormat.OpenXml.dll
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\bin\x64\Debug\net6.0-windows10.0.17763.0\OpenXmlPowerTools.dll
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\bin\x64\Debug\net6.0-windows10.0.17763.0\System.Management.Automation.dll
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\bin\x64\Debug\net6.0-windows10.0.17763.0\Microsoft.Windows.SDK.NET.dll
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\bin\x64\Debug\net6.0-windows10.0.17763.0\WinRT.Runtime.dll
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.csproj.AssemblyReference.cache
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.Form1.resources
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.Properties.Resources.resources
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.SelectProtocolDialog.resources
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.csproj.GenerateResource.cache
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.AssemblyInfoInputs.cache
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.AssemblyInfo.cs
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.csproj.CoreCompileInputs.cache
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultP.FA62DD09.Up2Date
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.dll
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\refint\DefaultPrograms.dll
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.pdb
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\DefaultPrograms.genruntimeconfig.cache
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\obj\x64\Debug\net6.0-windows10.0.17763.0\ref\DefaultPrograms.dll

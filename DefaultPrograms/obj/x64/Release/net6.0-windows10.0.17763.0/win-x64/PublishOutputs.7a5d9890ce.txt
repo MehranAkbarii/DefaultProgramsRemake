@@ -1,0 +1,7 @@
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\bin\Release\net6.0-windows10.0.17763.0\publish\DefaultPrograms.pdb
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\bin\Release\net6.0-windows10.0.17763.0\publish\D3DCompiler_47_cor3.dll
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\bin\Release\net6.0-windows10.0.17763.0\publish\PenImc_cor3.dll
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\bin\Release\net6.0-windows10.0.17763.0\publish\PresentationNative_cor3.dll
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\bin\Release\net6.0-windows10.0.17763.0\publish\vcruntime140_cor3.dll
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\bin\Release\net6.0-windows10.0.17763.0\publish\wpfgfx_cor3.dll
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\bin\Release\net6.0-windows10.0.17763.0\publish\DefaultPrograms.exe
