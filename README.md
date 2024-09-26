@@ -19,7 +19,7 @@ These 3 functionalities are still missing (first two functionalities even missin
 
 -Make an app or a program the default for multiple file types or protocols it can open at once.
 
--Set default app or program for protocols by app. 
+-Set default win32 program for protocols by app. 
 <blockquote>
 
 The reason why I can remake this functionality because there is no way to change protocols associations without using ms-settings or classic Default Programs\Set Associations page from Default Programs Control Panel because Windows uses hashes to prevent changing protocols associations by directly editing registry values ​​by users and third-party apps, Hash value data and ProgID value data are not changeable directly ​​by users and third-party apps 
