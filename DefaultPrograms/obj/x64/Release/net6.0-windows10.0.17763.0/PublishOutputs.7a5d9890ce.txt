@@ -1,0 +1,10 @@
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\bin\Release\net6.0-windows10.0.17763.0\publish\DefaultPrograms.exe
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\bin\Release\net6.0-windows10.0.17763.0\publish\DefaultPrograms.dll
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\bin\Release\net6.0-windows10.0.17763.0\publish\DefaultPrograms.deps.json
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\bin\Release\net6.0-windows10.0.17763.0\publish\DefaultPrograms.runtimeconfig.json
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\bin\Release\net6.0-windows10.0.17763.0\publish\DefaultPrograms.pdb
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\bin\Release\net6.0-windows10.0.17763.0\publish\Microsoft.Windows.SDK.NET.dll
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\bin\Release\net6.0-windows10.0.17763.0\publish\WinRT.Runtime.dll
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\bin\Release\net6.0-windows10.0.17763.0\publish\DocumentFormat.OpenXml.dll
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\bin\Release\net6.0-windows10.0.17763.0\publish\OpenXmlPowerTools.dll
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\bin\Release\net6.0-windows10.0.17763.0\publish\System.Management.Automation.dll
