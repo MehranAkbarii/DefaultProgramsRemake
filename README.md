@@ -24,7 +24,7 @@ These 3 functionalities are still missing (first two functionalities even missin
 
 The reason why I can remake this functionality because there is no way to change protocols associations without using ms-settings or classic Default Programs\Set Associations page from Default Programs Control Panel because Windows uses hashes to prevent changing protocols associations by directly editing registry values ​​by users and third-party apps, Hash value data and ProgID value data are not changeable directly ​​by users and third-party apps 
 
-**Update 26/09/2024:** now you can set UWP apps as default for your protocols that their support, using this app, my app do this by help of [SetUserFTA](https://kolbi.cz/blog/2017/10/25/setuserfta-userchoice-hash-defeated-set-file-type-associations-per-user/) in background
+**Update 26/09/2024:** from now you can set UWP apps as default for your protocols that their support, using this app, my app do this by help of [SetUserFTA](https://kolbi.cz/blog/2017/10/25/setuserfta-userchoice-hash-defeated-set-file-type-associations-per-user/) in background
 
 ![368557262-1214256d-96cf-49c8-a301-459b2aff419d](https://github.com/user-attachments/assets/40fa3386-d4ae-4c03-a6fd-7855bb35b336)
 
