@@ -4,7 +4,8 @@
 
 ![Screenshot (84)](https://github.com/MehranAkbarii/DefaultProgramsRemake/assets/133998536/f0827a97-2688-4448-8abd-286349b2b957)
 
-![Desktop Screenshot 2024 09 26 - 21 47 42 43](https://github.com/user-attachments/assets/97af9c1e-df8c-4a39-b4ff-6fdc385df4cb)
+![Desktop Screenshot 2024 09 27 - 00 31 14 79](https://github.com/user-attachments/assets/5ce7007a-6c15-4ab2-be3e-e955cc338fbe)
+
 
 
 **Notes:**
