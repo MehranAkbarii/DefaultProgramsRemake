@@ -12,29 +12,34 @@ using System.Windows.Forms;
 
 namespace DefaultPrograms {
     public partial class SelectProtocolDialog : Form {
-
         private Dictionary<string, string> appnames;
         private string protocol;
         public SelectProtocolDialog(Dictionary<string, string> appnames, string protocol) {
             this.appnames = appnames;
             this.protocol = protocol;
             InitializeComponent();
+            progslistView.Columns.Add("").Width = 400;
             foreach (var appname in this.appnames) {
-                ListViewItem item = new ListViewItem(appname.Key);
-                item.SubItems.Add(appname.Key);
-                progslistView.Items.Add(item);
+                //add and handle customized names for apps 
+                if (appname.Key == "Windows Media Player") {
+                    ListViewItem item = new ListViewItem("Media Player");
+                    item.SubItems.Add("Media Player");
+                    progslistView.Items.Add(item);
+                } else {
+                    ListViewItem item = new ListViewItem(appname.Key);
+                    item.SubItems.Add(appname.Key);
+                    progslistView.Items.Add(item);
+                }
             }
         }
-
-
-        private string getProtocolsDefaultHandlers() {
-            //I have no idea how to get this.
-            return string.Empty;
-        }
-
         private void okButton_Click(object sender, EventArgs e) {
-            if (progslistView.SelectedItems.Count > 0)
-                AppAssociation.changeProtocolAssociation(appnames[progslistView.SelectedItems[0].Text], protocol);
+            if (progslistView.SelectedItems.Count > 0) {
+                //add and handle customized names for apps 
+                if (progslistView.SelectedItems[0].Text == "Media Player") {
+                    AppAssociation.changeProtocolAssociation(appnames["Windows Media Player"], protocol);
+                } else
+                    AppAssociation.changeProtocolAssociation(appnames[progslistView.SelectedItems[0].Text], protocol);
+            }
             this.Close();
         }
 

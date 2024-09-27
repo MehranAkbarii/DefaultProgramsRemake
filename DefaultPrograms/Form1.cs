@@ -185,6 +185,7 @@ namespace DefaultPrograms {
                             } else {
                                 //get protocols info
                                 item.SubItems.Add(AppAssociation.getProtocolDiscription(association));
+                                item.SubItems.Add(Helper.customizedHandlers(AppAssociation.getProtocolDefaultHandler(association)));
                             }
                             // Add the ListViewItem to the ListView
                             listViewFileExtensions.Items.Add(item);

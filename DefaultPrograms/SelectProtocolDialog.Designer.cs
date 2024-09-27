@@ -34,13 +34,14 @@
             progslistView.BackColor = SystemColors.Window;
             progslistView.BorderStyle = BorderStyle.None;
             progslistView.FullRowSelect = true;
+            progslistView.HeaderStyle = ColumnHeaderStyle.None;
             progslistView.Location = new Point(12, 57);
             progslistView.MultiSelect = false;
             progslistView.Name = "progslistView";
             progslistView.Size = new Size(400, 341);
             progslistView.TabIndex = 0;
             progslistView.UseCompatibleStateImageBehavior = false;
-            progslistView.View = View.List;
+            progslistView.View = View.Details;
             // 
             // okButton
             // 
@@ -67,11 +68,11 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.ActiveBorder;
-            label2.Location = new Point(10, 32);
+            label2.Location = new Point(11, 32);
             label2.Name = "label2";
-            label2.Size = new Size(402, 13);
+            label2.Size = new Size(407, 13);
             label2.TabIndex = 4;
-            label2.Text = "_______________________________________________________________________________";
+            label2.Text = "________________________________________________________________________________";
             // 
             // SelectProtocolDialog
             // 

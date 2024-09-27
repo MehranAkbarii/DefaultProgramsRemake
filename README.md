@@ -20,12 +20,12 @@ These 3 functionalities are still missing (first two functionalities even missin
 
 -Make an app or a program the default for multiple file types or protocols it can open at once.
 
--Set win32 program as default for protocols by app. 
+-Set win32 programs as default programs for protocols by app. 
 <blockquote>
 
 The reason why I can remake this functionality because there is no way to change protocols associations without using ms-settings or classic Default Programs\Set Associations page from Default Programs Control Panel because Windows uses hashes to prevent changing protocols associations by directly editing registry values ​​by users and third-party apps, Hash value data and ProgID value data are not changeable directly ​​by users and third-party apps 
 
-**Update 26/09/2024:** from now you can set UWP apps as default app for your protocols that their support, using this app, my app do this by help of [SetUserFTA](https://kolbi.cz/blog/2017/10/25/setuserfta-userchoice-hash-defeated-set-file-type-associations-per-user/) in background
+**Update 26/09/2024:** from now you can set UWP apps as default apps for the protocols that their support, using this app, this app do it by help of [SetUserFTA](https://kolbi.cz/blog/2017/10/25/setuserfta-userchoice-hash-defeated-set-file-type-associations-per-user/) in background
 
 ![368557262-1214256d-96cf-49c8-a301-459b2aff419d](https://github.com/user-attachments/assets/40fa3386-d4ae-4c03-a6fd-7855bb35b336)
 
@@ -38,7 +38,9 @@ I don't know how can I get list of supported protocols for non-UWP apps in my ap
 
 I need contribution to complete this app, if someone has knowledge about it please contribute, I can not add anymore functionalities, if you face any issues tell me If I could I will fix it , since I used windows forms it is hard to me to make the app UI exact same as original page because windows forms is so limited, maybe in future I would remake the project using wpf and make app UI more look like original one
 
-**Known issue:** The openWith menu may not open on some systems when Windows system language is set to a language other than English.
+**Known issue:** 
+
+The openWith menu may not open on some systems when Windows system language is set to a language other than English.
 
 **Misc:**
 

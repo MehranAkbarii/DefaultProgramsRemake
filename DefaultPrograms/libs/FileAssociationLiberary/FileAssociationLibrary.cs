@@ -17,6 +17,8 @@ using DocumentFormat.OpenXml.ExtendedProperties;
 using Microsoft.VisualBasic.Devices;
 using System.Drawing;
 using DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming;
+using DocumentFormat.OpenXml.Drawing.Spreadsheet;
+using System.Windows.Forms;
 
 namespace FileAssociationLibrary {
 
@@ -782,6 +784,29 @@ namespace FileAssociationLibrary {
                 }
             }
             return progid;
+        }
+
+        public static string getProtocolDefaultHandler(string protocol) {
+            //get app family name from progid value data from key bellow
+            //Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\Shell\Associations\UrlAssociations\{protocol}\UserChoice
+            string str = @"SOFTWARE\Microsoft\Windows\Shell\Associations\UrlAssociations\" + protocol + "\\UserChoice";
+            RegistryKey key = Registry.CurrentUser.OpenSubKey(str);
+            string progID = "";
+            if (key != null) {
+                progID = key.GetValue("ProgID") as string;
+            }
+            string defaultHandler = getUWPappNameFromProgID(progID);
+            if (defaultHandler == "") {
+                str = @"SOFTWARE\Classes\" + progID;
+                key = Registry.CurrentUser.OpenSubKey(str);
+                if (key != null) {
+                    defaultHandler = key.GetValue("FriendlyTypeName") as string;
+                }
+            }
+            if (defaultHandler == null) {
+                defaultHandler = "Unknown application";
+            }
+            return defaultHandler;
         }
 
         public static string getAssocDescriptionInfo(FileAssociationManager assocManager, string association) {
