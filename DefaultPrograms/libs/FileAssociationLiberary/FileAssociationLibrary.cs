@@ -19,6 +19,9 @@ using System.Drawing;
 using DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming;
 using DocumentFormat.OpenXml.Drawing.Spreadsheet;
 using System.Windows.Forms;
+using MintPlayer.BrowserDialog;
+using MintPlayer.PlatformBrowser;
+using System.Collections.ObjectModel;
 
 namespace FileAssociationLibrary {
 
@@ -722,19 +725,45 @@ namespace FileAssociationLibrary {
             RegistryKey key = Registry.LocalMachine.OpenSubKey(str);
             string info = "";
             if (key != null) {
-                return key.GetValue("") as string;
+                info = key.GetValue("") as string;
             }
-            if (info == "") {
+            if ((info == "") || (info == null)){
                 info = "URL:" + protocol;
             }
             return info;
         }
 
 
-        public static string changeProtocolAssociation(string familyName, string protocol) {
+        public async static void setBrowserAsDefaultAppForProtocol(string browsername, string protocol) {
+            //get list of browsers 
+            ReadOnlyCollection<Browser> browsers = await PlatformBrowser.GetInstalledBrowsers();
+
+            //find target browser
+            Browser targetBrowser = browsers.Single(browser => browser.Name == browsername);
+            //search for target browser's prog id of selected protocol
+            string progId = targetBrowser.UrlAssociations[protocol].ToString();
+            setUserFTA(protocol, progId);
+            //handling default browser
+            if (protocol == "https") {
+                progId = targetBrowser.UrlAssociations["http"].ToString();
+                setUserFTA("http", progId);
+            }
+            if (protocol == "http") {
+                progId = targetBrowser.UrlAssociations["https"].ToString();
+                setUserFTA("https", progId);
+            }
+        }
+
+        public static void changeProtocolAssociation(string familyName, string protocol) {
             //use SetUserFTA in backgroound to change association by prog id
             //win32 apps curenntly not soppurted 
             string progId = getUWPappProtoclosProgIdByFamilyname(familyName, protocol);
+            //SetUserFTA.exe {protocol} {progid}
+            setUserFTA(protocol, progId);
+
+        }
+
+        private static string setUserFTA(string protocol, string progId) {
             //SetUserFTA.exe {protocol} {progid}
             ProcessStartInfo processInfo = new ProcessStartInfo {
                 FileName = "SetUserFTA.exe", // The executable to run
@@ -753,7 +782,6 @@ namespace FileAssociationLibrary {
 
                 return result;
             }
-
         }
 
         public static string getUWPappProtoclosProgIdByFamilyname(string familyName, string protocol) {

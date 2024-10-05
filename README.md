@@ -4,9 +4,9 @@
 
 ![Screenshot (84)](https://github.com/MehranAkbarii/DefaultProgramsRemake/assets/133998536/f0827a97-2688-4448-8abd-286349b2b957)
 
-![Desktop Screenshot 2024 09 27 - 00 31 14 79](https://github.com/user-attachments/assets/5ce7007a-6c15-4ab2-be3e-e955cc338fbe)
+![Desktop Screenshot 2024 09 27 - 17 33 06 69](https://github.com/user-attachments/assets/51f2893b-458c-42c1-bc29-c0bec1d2db79)
 
-
+![Desktop Screenshot 2024 09 27 - 17 33 15 82](https://github.com/user-attachments/assets/cfb164f8-a9fe-4027-b5eb-ea55af9437f1)
 
 **Notes:**
 
@@ -27,10 +27,9 @@ The reason why I can remake this functionality because there is no way to change
 
 **Update 26/09/2024:** from now you can set UWP apps as default apps for the protocols that their support, using this app, this app do it by help of [SetUserFTA](https://kolbi.cz/blog/2017/10/25/setuserfta-userchoice-hash-defeated-set-file-type-associations-per-user/) in background
 
-![368557262-1214256d-96cf-49c8-a301-459b2aff419d](https://github.com/user-attachments/assets/40fa3386-d4ae-4c03-a6fd-7855bb35b336)
+![371264376-40fa3386-d4ae-4c03-a6fd-7855bb35b336](https://github.com/user-attachments/assets/3d31d8d6-3af7-48ab-bbd7-e6aaf3e15660)
 
-
-I don't know how can I get list of supported protocols for non-UWP apps in my app so supported protocols for non uwp apps won't be listed  
+I don't know how can I get list of supported protocols for non-UWP apps in my app so supported protocols for non-Uwp apps won't be listed  
 
 ![Screenshot (104)](https://github.com/user-attachments/assets/ecbfca98-525e-4a8a-8abb-fc84601fd925)
 
@@ -38,9 +37,11 @@ I don't know how can I get list of supported protocols for non-UWP apps in my ap
 
 I need contribution to complete this app, if someone has knowledge about it please contribute, I can not add anymore functionalities, if you face any issues tell me If I could I will fix it , since I used windows forms it is hard to me to make the app UI exact same as original page because windows forms is so limited, maybe in future I would remake the project using wpf and make app UI more look like original one
 
-**Known issue:** 
+**Known issues:** 
 
-The openWith menu may not open on some systems when Windows system language is set to a language other than English.
+-The openWith menu may not open on some systems when Windows system language is set to a language other than English
+
+-Some UWP apps and Win32 programs with file or protocol opening capabilities won't be listed in apps listview
 
 **Misc:**
 

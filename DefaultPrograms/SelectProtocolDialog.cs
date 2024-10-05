@@ -37,6 +37,9 @@ namespace DefaultPrograms {
                 //add and handle customized names for apps 
                 if (progslistView.SelectedItems[0].Text == "Media Player") {
                     AppAssociation.changeProtocolAssociation(appnames["Windows Media Player"], protocol);
+                } else if (appnames[progslistView.SelectedItems[0].Text].Equals(string.Empty)) {
+                    //flag browser
+                    AppAssociation.setBrowserAsDefaultAppForProtocol(progslistView.SelectedItems[0].Text, protocol);
                 } else
                     AppAssociation.changeProtocolAssociation(appnames[progslistView.SelectedItems[0].Text], protocol);
             }

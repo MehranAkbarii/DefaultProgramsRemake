@@ -9,7 +9,11 @@ using Windows.ApplicationModel;
 using Windows.Management.Deployment;
 using Windows.System;
 using FileAssociationLibrary;
+using MintPlayer.BrowserDialog;
+using MintPlayer.PlatformBrowser;
 using FileAssociationLiberary.Internal;
+using System.Collections.ObjectModel;
+using System.IO.Packaging;
 
 namespace DefaultPrograms {
     public partial class Form1 : Form {
@@ -79,13 +83,14 @@ namespace DefaultPrograms {
         private PackageManager packageManager;
         private FileAssociationManager assocManager;
         List<RegisteredApplication> registeredPrograms;
-
+        ReadOnlyCollection<Browser> browsers;
         public Form1() {
             InitializeComponent();
             packageManager = new PackageManager();
             assocManager = new FileAssociationManager();
             loadUWPApps();
             loadPrograms();
+            loadBrowsers();
             listViewUWPApps.Columns.Add("Apps").Width = 200;
             listViewFileExtensions.Columns.Add("Extensions").Width = 220;
             listViewFileExtensions.Columns.Add("Description").Width = 300;
@@ -128,7 +133,7 @@ namespace DefaultPrograms {
         }
 
 
-        private async Task<Package> findPackageByFullName(string packageFullName) {
+        private async Task<Windows.ApplicationModel.Package> findPackageByFullName(string packageFullName) {
             PackageManager packageManager = new PackageManager();
             var packages = packageManager.FindPackagesForUser(string.Empty);
 
@@ -252,7 +257,6 @@ namespace DefaultPrograms {
         private void showSelectProtocolDialog(string protocolToFind) {
             var packages = packageManager.FindPackagesForUser(string.Empty);
             Dictionary<string, string> appnames = new Dictionary<string, string>();
-
             foreach (var package in packages) {
                 if (package != null) {
                     var installedLocation = package.InstalledLocation;
@@ -278,6 +282,12 @@ namespace DefaultPrograms {
             //open Dialog
 
             //I should send protocol for change 
+            //List<string> names = this.browsers.Select(browser => browser.Name).ToList();
+            foreach (var browser in browsers) {
+                if (browser.UrlAssociations.Keys.Contains(protocolToFind)) {
+                    appnames.Add(browser.Name, string.Empty);
+                }
+            }
             new SelectProtocolDialog(appnames, protocolToFind).Show();
         }
 
@@ -285,7 +295,10 @@ namespace DefaultPrograms {
         private void listViewUWPApps_MouseClick(object sender, MouseEventArgs e) {
             listViewFileExtensions.Clear();
             if (listViewUWPApps.SelectedItems[0].SubItems.Count > 1) {
-                displayUwpFileExtensions(listViewUWPApps.SelectedItems[0].SubItems[1].Text);
+                if (listViewUWPApps.SelectedItems[0].SubItems[1].Text.Equals("browser")) {
+                    displayBrowsersExtentions(listViewUWPApps.SelectedItems[0].Text);
+                } else
+                    displayUwpFileExtensions(listViewUWPApps.SelectedItems[0].SubItems[1].Text);
             } else {
                 displayProgramExtensions(listViewUWPApps.SelectedItems[0].Text);
             }
@@ -301,18 +314,56 @@ namespace DefaultPrograms {
         private void loadPrograms() {
             registeredPrograms = FileAssociationManager.GetRegisteredApplications();
             foreach (RegisteredApplication application in this.registeredPrograms) {
-                if ((!application.DisplayName.Equals("File Explorer")) && (!application.DisplayName.Equals("Windows Search Explorer")))
+                if ((!application.DisplayName.Equals("File Explorer")) && (!application.DisplayName.Equals("Windows Search Explorer") && (!application.DisplayName.Equals("Microsoft Edge"))))
                     listViewUWPApps.Items.Add(application.DisplayName);
             }
         }
+
+
+        private async void loadBrowsers() {
+            browsers = await PlatformBrowser.GetInstalledBrowsers();
+            foreach (var browser in browsers) {
+                ListViewItem listitem = new ListViewItem(browser.Name);
+                listitem.SubItems.Add("browser");
+                listViewUWPApps.Items.Add(listitem);
+            }
+        }
+
+        private void displayBrowsersExtentions(string browserName) {
+            Browser installedBrowser = browsers.Single(browser => browser.Name.Equals(browserName));
+            List<String> extensions = installedBrowser.UrlAssociations.Keys.ToList();
+            extensions.AddRange(installedBrowser.FileAssociations.Keys);
+            foreach (var extension in extensions) {
+                if ((extension != "") && (extension != "*")) {
+                    ListViewItem item = new ListViewItem(extension);
+                    if (extension.StartsWith(".")) {
+                        item.SubItems.Add(AppAssociation.getAssocDescriptionInfo(assocManager, extension));
+                        item.SubItems.Add(Helper.customizedHandlers(AppAssociation.GetDefaultHandler(assocManager, extension)));
+                    } else {
+                        //get protocols info
+                        item.SubItems.Add(AppAssociation.getProtocolDiscription(extension));
+                        item.SubItems.Add(Helper.customizedHandlers(AppAssociation.getProtocolDefaultHandler(extension)));
+                    }
+                    listViewFileExtensions.Items.Add(item);
+                }
+            }
+        }
+
+
         private void displayProgramExtensions(string programName) {
-            RegisteredApplication registeredProgram = registeredPrograms.Single((registeredProgram) => registeredProgram.DisplayName.Equals(programName));
+            RegisteredApplication registeredProgram = registeredPrograms.SingleOrDefault((registeredProgram) => registeredProgram.DisplayName.Equals(programName));
             List<String> extensions = registeredProgram.Capabilities;
             foreach (var extension in extensions) {
                 if ((extension != "") && (extension != "*")) {
                     ListViewItem item = new ListViewItem(extension);
-                    item.SubItems.Add(AppAssociation.getAssocDescriptionInfo(assocManager, extension));
-                    item.SubItems.Add(Helper.customizedHandlers(AppAssociation.GetDefaultHandler(assocManager, extension)));
+                    if (extension.StartsWith(".")) {
+                        item.SubItems.Add(AppAssociation.getAssocDescriptionInfo(assocManager, extension));
+                        item.SubItems.Add(Helper.customizedHandlers(AppAssociation.GetDefaultHandler(assocManager, extension)));
+                    } else {
+                        //get protocols info
+                        item.SubItems.Add(AppAssociation.getProtocolDiscription(extension));
+                        item.SubItems.Add(Helper.customizedHandlers(AppAssociation.getProtocolDefaultHandler(extension)));
+                    }
                     listViewFileExtensions.Items.Add(item);
                 }
             }
