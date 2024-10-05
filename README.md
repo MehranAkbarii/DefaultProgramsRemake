@@ -25,11 +25,11 @@ These 3 functionalities are still missing (first two functionalities even missin
 
 The reason why I can remake this functionality because there is no way to change protocols associations without using ms-settings or classic Default Programs\Set Associations page from Default Programs Control Panel because Windows uses hashes to prevent changing protocols associations by directly editing registry values ​​by users and third-party apps, Hash value data and ProgID value data are not changeable directly ​​by users and third-party apps 
 
-**Update 26/09/2024:** from now you can set UWP apps as default apps for the protocols that their support, using this app, this app do it by help of [SetUserFTA](https://kolbi.cz/blog/2017/10/25/setuserfta-userchoice-hash-defeated-set-file-type-associations-per-user/) in background
+**Update 26/09/2024:** from now you can set UWP apps and your installed Web Browsers as default apps for the protocols that their support, using this app, this app do it by help of [SetUserFTA](https://kolbi.cz/blog/2017/10/25/setuserfta-userchoice-hash-defeated-set-file-type-associations-per-user/) in background
 
 ![371264376-40fa3386-d4ae-4c03-a6fd-7855bb35b336](https://github.com/user-attachments/assets/3d31d8d6-3af7-48ab-bbd7-e6aaf3e15660)
 
-I don't know how can I get list of supported protocols for non-UWP apps in my app so supported protocols for non-Uwp apps won't be listed  
+I don't know how can I get list of supported protocols for non-UWP apps and non-Browser win32 programs in my app so supported protocols for on-UWP apps and non-Browser win32 programs won't be listed  
 
 ![Screenshot (104)](https://github.com/user-attachments/assets/ecbfca98-525e-4a8a-8abb-fc84601fd925)
 
