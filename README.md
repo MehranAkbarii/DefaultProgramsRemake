@@ -4,9 +4,12 @@
 
 ![Screenshot (84)](https://github.com/MehranAkbarii/DefaultProgramsRemake/assets/133998536/f0827a97-2688-4448-8abd-286349b2b957)
 
-![Desktop Screenshot 2024 09 27 - 17 33 06 69](https://github.com/user-attachments/assets/51f2893b-458c-42c1-bc29-c0bec1d2db79)
+![Screenshot (120)](https://github.com/user-attachments/assets/d1578433-a159-49cc-8d06-16ccc22e53aa)
 
-![Desktop Screenshot 2024 09 27 - 17 33 15 82](https://github.com/user-attachments/assets/cfb164f8-a9fe-4027-b5eb-ea55af9437f1)
+![Screenshot (119)](https://github.com/user-attachments/assets/b7233593-abd6-4b40-b9fb-281f75b4c716)
+
+![Screenshot (118)](https://github.com/user-attachments/assets/bf0799ff-5f8d-4fb1-9265-d9834ba1f83d)
+
 
 **Notes:**
 
@@ -25,13 +28,15 @@ These 3 functionalities are still missing (first two functionalities even missin
 
 The reason why I can remake this functionality because there is no way to change protocols associations without using ms-settings or classic Default Programs\Set Associations page from Default Programs Control Panel because Windows uses hashes to prevent changing protocols associations by directly editing registry values ​​by users and third-party apps, Hash value data and ProgID value data are not changeable directly ​​by users and third-party apps 
 
-**Update 26/09/2024:** from now you can set UWP apps as default apps for the protocols that their support, using this app, this app do it by help of [SetUserFTA](https://kolbi.cz/blog/2017/10/25/setuserfta-userchoice-hash-defeated-set-file-type-associations-per-user/) in background
+**Update 06/10/2024:** from now you can set UWP apps and your installed web browsers as default programs for the protocols that their support, using this app, this app do it by help of [SetUserFTA](https://kolbi.cz/blog/2017/10/25/setuserfta-userchoice-hash-defeated-set-file-type-associations-per-user/) in background
 
-![371264376-40fa3386-d4ae-4c03-a6fd-7855bb35b336](https://github.com/user-attachments/assets/3d31d8d6-3af7-48ab-bbd7-e6aaf3e15660)
+![Screenshot (116)](https://github.com/user-attachments/assets/dc66ea7b-dcf0-4255-98f9-63746eb3723e)
 
-I don't know how can I get list of supported protocols for non-UWP apps in my app so supported protocols for non-Uwp apps won't be listed  
 
-![Screenshot (104)](https://github.com/user-attachments/assets/ecbfca98-525e-4a8a-8abb-fc84601fd925)
+I don't know how can I get list of supported protocols for non-UWP apps and non browser win32 programs in my app so supported protocols for non-UWP apps and non browser win32 programs won't be listed  
+
+![Screenshot (117)](https://github.com/user-attachments/assets/2eb4ab17-5df2-46a9-8b5d-30dfd80998a9)
+
 
 </blockquote>
 

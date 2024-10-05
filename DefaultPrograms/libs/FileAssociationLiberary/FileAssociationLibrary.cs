@@ -725,7 +725,7 @@ namespace FileAssociationLibrary {
             RegistryKey key = Registry.LocalMachine.OpenSubKey(str);
             string info = "";
             if (key != null) {
-                info = key.GetValue("") as string;
+                return key.GetValue("") as string;
             }
             if ((info == "") || (info == null)){
                 info = "URL:" + protocol;
@@ -831,7 +831,7 @@ namespace FileAssociationLibrary {
                     defaultHandler = key.GetValue("FriendlyTypeName") as string;
                 }
             }
-            if (defaultHandler == null) {
+            if ((defaultHandler == null) || (defaultHandler == "")) {
                 defaultHandler = "Unknown application";
             }
             return defaultHandler;
