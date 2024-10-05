@@ -4,9 +4,12 @@
 
 ![Screenshot (84)](https://github.com/MehranAkbarii/DefaultProgramsRemake/assets/133998536/f0827a97-2688-4448-8abd-286349b2b957)
 
-![Desktop Screenshot 2024 09 27 - 17 33 06 69](https://github.com/user-attachments/assets/51f2893b-458c-42c1-bc29-c0bec1d2db79)
+![Screenshot (120)](https://github.com/user-attachments/assets/d1578433-a159-49cc-8d06-16ccc22e53aa)
 
-![Desktop Screenshot 2024 09 27 - 17 33 15 82](https://github.com/user-attachments/assets/cfb164f8-a9fe-4027-b5eb-ea55af9437f1)
+![Screenshot (119)](https://github.com/user-attachments/assets/b7233593-abd6-4b40-b9fb-281f75b4c716)
+
+![Screenshot (118)](https://github.com/user-attachments/assets/bf0799ff-5f8d-4fb1-9265-d9834ba1f83d)
+
 
 **Notes:**
 
