@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{5888C186-ADB2-45ED-89CD-FA6841B7B99D}|DefaultPrograms\\DefaultPrograms.csproj|c:\\users\\home\\documents\\vs projects\\defaultprogramsremake\\defaultprograms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5888C186-ADB2-45ED-89CD-FA6841B7B99D}|DefaultPrograms\\DefaultPrograms.csproj|solutionrelative:defaultprograms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5888C186-ADB2-45ED-89CD-FA6841B7B99D}|DefaultPrograms\\DefaultPrograms.csproj|c:\\users\\home\\documents\\vs projects\\defaultprogramsremake\\defaultprograms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5888C186-ADB2-45ED-89CD-FA6841B7B99D}|DefaultPrograms\\DefaultPrograms.csproj|solutionrelative:defaultprograms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Home\\Documents\\VS projects\\DefaultProgramsRemake\\DefaultPrograms\\Form1.cs",
+              "RelativeDocumentMoniker": "DefaultPrograms\\Form1.cs",
+              "ToolTip": "C:\\Users\\Home\\Documents\\VS projects\\DefaultProgramsRemake\\DefaultPrograms\\Form1.cs",
+              "RelativeToolTip": "DefaultPrograms\\Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T13:15:29.048Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -25,7 +42,7 @@
               "ToolTip": "C:\\Users\\Home\\Documents\\VS projects\\DefaultProgramsRemake\\DefaultPrograms\\Form1.cs [Design]",
               "RelativeToolTip": "DefaultPrograms\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T23:47:01.147Z",
+              "WhenOpened": "2024-10-06T13:11:05.5Z",
               "EditorCaption": " [Design]"
             }
           ]

@@ -1,0 +1,2 @@
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\bin\DefaultPrograms.pdb
+C:\Users\Home\Documents\VS projects\DefaultProgramsRemake\DefaultPrograms\bin\DefaultPrograms.exe

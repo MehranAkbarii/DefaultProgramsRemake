@@ -725,7 +725,7 @@ namespace FileAssociationLibrary {
             RegistryKey key = Registry.LocalMachine.OpenSubKey(str);
             string info = "";
             if (key != null) {
-                return key.GetValue("") as string;
+                info = key.GetValue("") as string;
             }
             if ((info == "") || (info == null)){
                 info = "URL:" + protocol;
