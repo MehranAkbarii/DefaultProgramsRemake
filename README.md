@@ -48,6 +48,8 @@ I need contribution to complete this app, if someone has knowledge about it plea
 
 -Some UWP apps and Win32 programs with file or protocol opening capabilities won't be listed in apps listview
 
+-Names of current default apps of some protocols or extensions won't be listed in current defaults column of extentions listview and will listed as Unknown Application
+
 **Misc:**
 
 To restore classic **Default Programs\Set Associations page** from Default Programs Control Panel download modified version of windows 10 1703 (x64) sud.dll and sud.dll.mui files from [here](https://github.com/MehranAkbarii/DefaultProgramsRemake/files/15055799/Modified_Windows10_1703_sud.dll.zip) and then copy and replace sud.dll to %systemroot%\System32 and sud.dll.mui file to %systemroot%\System32\en-US directories, **_dont forget to take a backup of your original sud.dll and sud.dll.mui files before copy and replace the files_**
