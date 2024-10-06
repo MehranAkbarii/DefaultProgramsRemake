@@ -44,7 +44,7 @@ I need contribution to complete this app, if someone has knowledge about it plea
 
 **Known issues:** 
 
--The openWith menu will not open when Windows system language is set to a language other than English (I won't fix it because I dont care about localization, so set english as your windows display language if you want this app work correctly on your system)
+-The openWith menu will not open when Windows system language is set to a language other than English (I won't fix it because I don't care about localization, so set english as your windows display language if you want this app work correctly on your system)
 
 -Some UWP apps and Win32 programs with file or protocol opening capabilities won't be listed in apps listview
 
