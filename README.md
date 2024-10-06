@@ -48,7 +48,7 @@ I need contribution to complete this app, if someone has knowledge about it plea
 
 -Some UWP apps and Win32 programs with file or protocol opening capabilities won't be listed in apps listview
 
--Names of current default apps of some protocols or extensions won't be listed in current defaults column of extentions listview and will listed as Unknown Application
+-Names of some current default apps of some protocols or extensions won't be listed in current defaults column of extentions listview and will listed as Unknown Application
 
 **Misc:**
 
