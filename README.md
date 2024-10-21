@@ -1,4 +1,4 @@
-**Remake classic Set Default Programs page from Default Programs Control Panel (sud.dll) for Windows 10 1809 and above (x64) and Windows 11**
+## Remake classic Set Default Programs page from Default Programs Control Panel (sud.dll) for Windows 10 1809 and above (x64) and Windows 11
 
 ![Screenshot (83)](https://github.com/MehranAkbarii/DefaultProgramsRemake/assets/133998536/3cc0e1ca-5aca-4a50-adbe-2f11321a0ac9)
 
@@ -11,7 +11,7 @@
 ![Screenshot (118)](https://github.com/user-attachments/assets/bf0799ff-5f8d-4fb1-9265-d9834ba1f83d)
 
 
-**Notes:**
+# Notes
 
 Third party OpenWith menu replacment programs like OpenWithEnchanced are not compatible with this app and you may not able to change default apps using this app because of possible conflicts.
 
@@ -42,7 +42,7 @@ I don't know how can I get list of supported protocols for non-UWP apps and non 
 
 I need contribution to complete this app, if someone has knowledge about it please contribute, I can not add anymore functionalities, if you face any issues tell me If I could I will fix it , since I used windows forms it is hard to me to make the app UI exact same as original page because windows forms is so limited, maybe in future I would remake the project using wpf and make app UI more look like original one
 
-**Known issues:** 
+# Known issues: 
 
 -The openWith menu will not open when Windows system language is set to a language other than English (I won't fix it because I don't care about localization, so set english as your windows display language if you want this app work correctly on your system)
 
@@ -50,6 +50,6 @@ I need contribution to complete this app, if someone has knowledge about it plea
 
 -Names of some current default apps of some protocols or extensions won't be listed in current defaults column of extentions listview and will listed as Unknown Application
 
-**Misc:**
+# Misc:
 
 To restore classic **Default Programs\Set Associations page** from Default Programs Control Panel download modified version of windows 10 1703 (x64) sud.dll and sud.dll.mui files from [here](https://github.com/MehranAkbarii/DefaultProgramsRemake/files/15055799/Modified_Windows10_1703_sud.dll.zip) and then copy and replace sud.dll to %systemroot%\System32 and sud.dll.mui file to %systemroot%\System32\en-US directories, **_dont forget to take a backup of your original sud.dll and sud.dll.mui files before copy and replace the files_**
