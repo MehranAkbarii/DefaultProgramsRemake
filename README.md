@@ -40,6 +40,8 @@ I don't know how can I get list of supported protocols for non-UWP apps and non 
 
 </blockquote>
 
+## Contribution:
+
 I need contribution to complete this app, if someone has knowledge about it please contribute, I can not add anymore functionalities, if you face any issues tell me If I could I will fix it , since I used windows forms it is hard to me to make the app UI exact same as original page because windows forms is so limited, maybe in future I would remake the project using wpf and make app UI more look like original one
 
 ## Known issues: 
