@@ -19,11 +19,11 @@ Set Default Programs page from Default Programs (sud.dll) (Removed in Windows 10
 
 These 3 functionalities are still missing (first two functionalities even missing in ms-settings page and completely removed from windows):
 
--Make an app or a program the default for all file types and protocols it can open at once.
+- Make an app or a program the default for all file types and protocols it can open at once.
 
--Make an app or a program the default for multiple file types or protocols it can open at once.
+- Make an app or a program the default for multiple file types or protocols it can open at once.
 
--Set non browser win32 programs as default programs for protocols by app. 
+- Set non browser win32 programs as default programs for protocols by app. 
 <blockquote>
 
 The reason why I can remake this functionality because there is no way to change protocols associations without using ms-settings or classic Default Programs\Set Associations page from Default Programs Control Panel because Windows uses hashes to prevent changing protocols associations by directly editing registry values ​​by users and third-party apps, Hash value data and ProgID value data are not changeable directly ​​by users and third-party apps 
