@@ -9,7 +9,7 @@
 ![Screenshot (119)](https://github.com/user-attachments/assets/b7233593-abd6-4b40-b9fb-281f75b4c716)
 
 
-## Notes
+## Notes:
 
 Third party OpenWith menu replacment programs like OpenWithEnchanced are not compatible with this app and you may not able to change default apps using this app because of possible conflicts.
 
