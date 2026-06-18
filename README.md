@@ -21,9 +21,6 @@ These 2 functionalities are still missing (these are even missing in ms-settings
 
 - Make an app or a program the default for multiple file types or protocols it can open at once.
 
-## Contribution:
-
-I need contribution to complete this app, if someone has knowledge about it please contribute, I can not add anymore functionalities, if you face any issues tell me If I could I will fix it , since I used windows forms it is hard to me to make the app UI exact same as original page because windows forms is so limited, maybe in future I would remake the project using wpf and make app UI more look like original one
 
 ## Known issues: 
 
@@ -32,6 +29,10 @@ I need contribution to complete this app, if someone has knowledge about it plea
 -Some UWP apps and Win32 programs with file or protocol opening capabilities won't be listed in apps listview
 
 -Names of some current default apps of some protocols or extensions won't be listed in current defaults column of extentions listview and will listed as Unknown Application
+
+## Contribution:
+
+I need contribution to complete this app, if someone has knowledge about it please contribute, I can not add anymore functionalities, if you face any issues tell me If I could I will fix it , since I used windows forms it is hard to me to make the app UI exact same as original page because windows forms is so limited, maybe in future I would remake the project using wpf and make app UI more look like original one
 
 ## Misc:
 
