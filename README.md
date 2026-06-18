@@ -17,13 +17,11 @@ Third party OpenWith menu replacment programs like OpenWithEnchanced are not com
 
 Set Default Programs page from Default Programs (sud.dll) (Removed in Windows 10 1709-1803) is the only control panel page from windows 8 , 8.1 era that cannot be restored and cannot be remade completely and even there is no good replacement application for it even I could not remake it functionalities completely "Set default app or program for file types by app." feature was the only thing that I could remake it
 
-These 3 functionalities are still missing (first two functionalities even missing in ms-settings page and completely removed from windows):
+These 2 functionalities are still missing (these are even missing in ms-settings page and completely removed from windows):
 
 - Make an app or a program the default for all file types and protocols it can open at once.
 
 - Make an app or a program the default for multiple file types or protocols it can open at once.
-
-- Set non browser win32 programs as default programs for protocols by app.
 
 ## Contribution:
 
